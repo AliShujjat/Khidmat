@@ -17,12 +17,7 @@ namespace Khidmat
             loginReference = login;
         }
 
-        private void AddButton_Click(object sender, EventArgs e)
-        {
-            AddNewPatientScreen addNewPatientScreen = new AddNewPatientScreen(this);
-            addNewPatientScreen.Show();
-            this.Hide();
-        }
+
 
         private void LogOutButton_Click(object sender, EventArgs e)
         {
@@ -34,6 +29,13 @@ namespace Khidmat
         {
             SearchScreen searchScreen = new SearchScreen(this);
             searchScreen.Show();
+            this.Hide();
+        }
+
+        private void AddPatientButton_Click(object sender, EventArgs e)
+        {
+            AddNewPatientScreen addNewPatientScreen = new AddNewPatientScreen(this);
+            addNewPatientScreen.Show();
             this.Hide();
         }
     }

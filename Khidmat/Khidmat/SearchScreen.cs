@@ -22,5 +22,7 @@ namespace Khidmat
             this.Close();
             mainscreenReference.Show();
         }
+
+    
     }
 }

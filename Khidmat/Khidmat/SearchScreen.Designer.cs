@@ -31,15 +31,17 @@ namespace Khidmat
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.FilterDropDown = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.SearchButton = new System.Windows.Forms.Button();
             this.ClearButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.button4 = new System.Windows.Forms.Button();
+            this.DeleteButton = new System.Windows.Forms.Button();
+            this.EditButton = new System.Windows.Forms.Button();
+            this.SearchResultsList = new System.Windows.Forms.ListView();
+            this.ViewButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.SearchByTextbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -62,19 +64,19 @@ namespace Khidmat
             this.label2.TabIndex = 2;
             this.label2.Text = "Search Results:";
             // 
-            // comboBox1
+            // FilterDropDown
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.FilterDropDown.FormattingEnabled = true;
+            this.FilterDropDown.Items.AddRange(new object[] {
             "Name",
             "Age",
             "Sex",
             "Date of Procedure",
             "Diagnosis"});
-            this.comboBox1.Location = new System.Drawing.Point(286, 110);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(249, 28);
-            this.comboBox1.TabIndex = 3;
+            this.FilterDropDown.Location = new System.Drawing.Point(286, 110);
+            this.FilterDropDown.Name = "FilterDropDown";
+            this.FilterDropDown.Size = new System.Drawing.Size(249, 28);
+            this.FilterDropDown.TabIndex = 3;
             // 
             // label3
             // 
@@ -86,14 +88,14 @@ namespace Khidmat
             this.label3.TabIndex = 4;
             this.label3.Text = "Filter By:";
             // 
-            // button1
+            // SearchButton
             // 
-            this.button1.Location = new System.Drawing.Point(424, 209);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 38);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = true;
+            this.SearchButton.Location = new System.Drawing.Point(424, 209);
+            this.SearchButton.Name = "SearchButton";
+            this.SearchButton.Size = new System.Drawing.Size(78, 38);
+            this.SearchButton.TabIndex = 5;
+            this.SearchButton.Text = "Search";
+            this.SearchButton.UseVisualStyleBackColor = true;
             // 
             // ClearButton
             // 
@@ -104,41 +106,41 @@ namespace Khidmat
             this.ClearButton.Text = "Clear";
             this.ClearButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // DeleteButton
             // 
-            this.button2.Location = new System.Drawing.Point(187, 561);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 38);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = true;
+            this.DeleteButton.Location = new System.Drawing.Point(187, 561);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(78, 38);
+            this.DeleteButton.TabIndex = 8;
+            this.DeleteButton.Text = "Delete";
+            this.DeleteButton.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // EditButton
             // 
-            this.button3.Location = new System.Drawing.Point(325, 558);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(78, 38);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Edit";
-            this.button3.UseVisualStyleBackColor = true;
+            this.EditButton.Location = new System.Drawing.Point(325, 558);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(78, 38);
+            this.EditButton.TabIndex = 7;
+            this.EditButton.Text = "Edit";
+            this.EditButton.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // SearchResultsList
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(104, 290);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(543, 249);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.SearchResultsList.HideSelection = false;
+            this.SearchResultsList.Location = new System.Drawing.Point(104, 290);
+            this.SearchResultsList.Name = "SearchResultsList";
+            this.SearchResultsList.Size = new System.Drawing.Size(543, 249);
+            this.SearchResultsList.TabIndex = 1;
+            this.SearchResultsList.UseCompatibleStateImageBehavior = false;
             // 
-            // button4
+            // ViewButton
             // 
-            this.button4.Location = new System.Drawing.Point(483, 558);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(78, 38);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "View";
-            this.button4.UseVisualStyleBackColor = true;
+            this.ViewButton.Location = new System.Drawing.Point(475, 558);
+            this.ViewButton.Name = "ViewButton";
+            this.ViewButton.Size = new System.Drawing.Size(78, 38);
+            this.ViewButton.TabIndex = 9;
+            this.ViewButton.Text = "View";
+            this.ViewButton.UseVisualStyleBackColor = true;
             // 
             // BackButton
             // 
@@ -150,21 +152,40 @@ namespace Khidmat
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(160, 161);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(105, 28);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Search By:";
+            // 
+            // SearchByTextbox
+            // 
+            this.SearchByTextbox.Location = new System.Drawing.Point(286, 165);
+            this.SearchByTextbox.Name = "SearchByTextbox";
+            this.SearchByTextbox.Size = new System.Drawing.Size(249, 27);
+            this.SearchByTextbox.TabIndex = 12;
+            // 
             // SearchScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(718, 623);
+            this.Controls.Add(this.SearchByTextbox);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.BackButton);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.ViewButton);
+            this.Controls.Add(this.DeleteButton);
+            this.Controls.Add(this.EditButton);
             this.Controls.Add(this.ClearButton);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.FilterDropDown);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.SearchResultsList);
             this.Controls.Add(this.label1);
             this.Name = "SearchScreen";
             this.Text = "SearchScreen";
@@ -177,14 +198,16 @@ namespace Khidmat
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox FilterDropDown;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button SearchButton;
         private System.Windows.Forms.Button ClearButton;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button DeleteButton;
+        private System.Windows.Forms.Button EditButton;
+        private System.Windows.Forms.ListView SearchResultsList;
+        private System.Windows.Forms.Button ViewButton;
         private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox SearchByTextbox;
     }
 }

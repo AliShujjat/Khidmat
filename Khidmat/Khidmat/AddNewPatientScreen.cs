@@ -19,8 +19,8 @@ namespace Khidmat
         }
         private void checkedListBox1_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            for (int ix = 0; ix < checkedListBox1.Items.Count; ++ix)
-                if (ix != e.Index) checkedListBox1.SetItemChecked(ix, false);
+            for (int ix = 0; ix < GenderListBox.Items.Count; ++ix)
+                if (ix != e.Index) GenderListBox.SetItemChecked(ix, false);
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
@@ -33,6 +33,11 @@ namespace Khidmat
         {
             this.Close();
             mainscreenRef.Show();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
