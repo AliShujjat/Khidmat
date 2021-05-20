@@ -14,5 +14,7 @@ namespace Khidmat
         {
             InitializeComponent();
         }
+
+
     }
 }

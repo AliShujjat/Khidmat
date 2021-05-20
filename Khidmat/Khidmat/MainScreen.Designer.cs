@@ -33,7 +33,7 @@ namespace Khidmat
             this.WelcomeText = new System.Windows.Forms.Label();
             this.SearchButton = new System.Windows.Forms.Button();
             this.LogOutButton = new System.Windows.Forms.Button();
-            this.AddPatientButton = new System.Windows.Forms.Button();
+            this.AddRecordButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // WelcomeText
@@ -75,20 +75,20 @@ namespace Khidmat
             this.LogOutButton.UseVisualStyleBackColor = false;
             this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
             // 
-            // AddPatientButton
+            // AddRecordButton
             // 
-            this.AddPatientButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.AddPatientButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddPatientButton.BackgroundImage")));
-            this.AddPatientButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.AddPatientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddPatientButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.AddPatientButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.AddPatientButton.Location = new System.Drawing.Point(103, 156);
-            this.AddPatientButton.Name = "AddPatientButton";
-            this.AddPatientButton.Size = new System.Drawing.Size(519, 162);
-            this.AddPatientButton.TabIndex = 8;
-            this.AddPatientButton.UseVisualStyleBackColor = false;
-            this.AddPatientButton.Click += new System.EventHandler(this.AddPatientButton_Click);
+            this.AddRecordButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
+            this.AddRecordButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddRecordButton.BackgroundImage")));
+            this.AddRecordButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.AddRecordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddRecordButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AddRecordButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
+            this.AddRecordButton.Location = new System.Drawing.Point(103, 156);
+            this.AddRecordButton.Name = "AddRecordButton";
+            this.AddRecordButton.Size = new System.Drawing.Size(519, 162);
+            this.AddRecordButton.TabIndex = 8;
+            this.AddRecordButton.UseVisualStyleBackColor = false;
+            this.AddRecordButton.Click += new System.EventHandler(this.AddPatientButton_Click);
             // 
             // MainScreen
             // 
@@ -96,7 +96,7 @@ namespace Khidmat
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(719, 611);
-            this.Controls.Add(this.AddPatientButton);
+            this.Controls.Add(this.AddRecordButton);
             this.Controls.Add(this.LogOutButton);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.WelcomeText);
@@ -112,6 +112,6 @@ namespace Khidmat
         private System.Windows.Forms.Label WelcomeText;
         private System.Windows.Forms.Button SearchButton;
         private System.Windows.Forms.Button LogOutButton;
-        private System.Windows.Forms.Button AddPatientButton;
+        private System.Windows.Forms.Button AddRecordButton;
     }
 }

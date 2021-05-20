@@ -61,7 +61,7 @@
   <data name="SearchButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABQcAAAFyCAYAAABInWxXAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAA/7JJREFUeF7s/Xm0Pct134flj9iWJWcSQykeYstWYmu0ZVlREiWR47VszbbkZMXL
+        vgAADr4B6kKxwAAA/7JJREFUeF7s/Xm0Pct134flj9iWJWcSQykeYstWYmu0ZVlREiWR47VszbbkZMXL
         WbEc2ZIiWYMlUhJFgiCJiQQBiATAGQDnWSRAcQYHEQRAYiAe3jy/95vneR7f773X2d9dtat37d7V3We6
         95x79x+fVUNX9zm3T0/1ubu6/ienr97vgiAIgiAIgiAIgiAIgiA4fIQcDIIgCIIgCIIgCIIgCIJDSsjB
         IAiCIAiCIAiCIAiCIDikhBwMgiAIgiAIgiAIgiAIgkNKyMEgCIIgCIIgCIIgCIIgOKSEHAyCIAiCIAiC
@@ -2202,7 +2202,7 @@
   <data name="LogOutButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA7AAAAD4CAYAAADVXgpeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAxXdJREFUeF7tveejLTeRr33/z3fyMAw52DhnnA0OOGAbE5zAGGyCyQNcMGCCjXMO
+        vgAADr4B6kKxwAAAxXdJREFUeF7tveejLTeRr33/z3fyMAw52DhnnA0OOGAbE5zAGGyCyQNcMGCCjXMO
         xznnABjmfui3qqSSfqoudfcKe59z9q4PD5JKJXVYvcx+jrp7/Z/n3nh/OBx4fhu8mcF6EARBEARBEATB
         FNYr1sBznGB1DguB9S6ALt4FFwRBEARBEARBsBOgh6CXTOA5T7CMQ0pg7YdpP+iG3kVzkHgBSsT2eTmr
         su4cm2zbG4uxbRzXbrPN/d+p419l3sP9M/DawZh1z9Em59Ybi7HD8XPb5v7v1PGvMu/h/hl47WDMuudo
@@ -3048,10 +3048,10 @@
         RK5CYII=
 </value>
   </data>
-  <data name="AddPatientButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="AddRecordButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABOIAAAGECAYAAACbE4+mAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAA/7JJREFUeF7s/eebJNl2n4fyXxUl0ciADiApeEOQsKQoGoEiCIrkpQcoEVcCIF3g
+        vgAADr4B6kKxwAAA/7JJREFUeF7s/eebJNl2n4fyXxUl0ciADiApeEOQsKQoGoEiCIrkpQcoEVcCIF3g
         PiJ5CRAHx88Zb3um7XR3tTczc/jkXb9l9l57xQqTWVnVVdXrw/tsG5GRkZG7cr+1dsQf++z+i11RFEVR
         FEVRFEVRFEVRFGdLibiiKIqiKIqiKIqiKIqiOAdKxBVFURRFURRFURRFURTFOVAiriiKoiiKoiiKoiiK
         oijOgRJxRVEURVEURVEURVEURXEOlIgriqIoiqIoiqIoiqIoinOgRFxRFEVRFEVRFEVRFEVRnAMl4oqi

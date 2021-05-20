@@ -11,14 +11,14 @@ using System.Threading.Tasks;
 
 namespace RestaurantManagement
 {
-    class DbConnection
+    /* DbConnection
     {
         //Laiba Connection String
         //private static string myConnectionString = "Data Source=HU-DOPX-ML27;Initial Catalog=Project3;User ID=sa; password = M@lab9310SSe*!";
         private static string myConnectionString = @"server=LFK-HP;Initial Catalog=Project3;Integrated Security=True";
-        //Shahzain Connection String
+        //Ali Connection String
         //private static string myConnectionString = "server=DESKTOP-VEVG9RB;Initial Catalog=Project3;Integrated Security=True";
-        //Kabir connection string
+        //Alina connection string
         //private static string myConnectionString = @"server=DESKTOP-09G2FL8\SQLEXPRESS;Initial Catalog=Project4 ;Integrated Security=True";
         public SqlConnection conn = new SqlConnection(myConnectionString);
         public SqlCommand cmd = new SqlCommand();
@@ -155,5 +155,5 @@ namespace RestaurantManagement
             return myConnectionString;
         }
     }
-
+     */
 }
