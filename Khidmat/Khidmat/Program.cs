@@ -8,6 +8,7 @@ namespace Khidmat
 {
     static class Program
     {
+        public static string userType;
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>

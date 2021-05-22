@@ -14,12 +14,14 @@ namespace Khidmat
     {
         //Laiba Connection String
         //private static string myConnectionString = "Data Source=HU-DOPX-ML27;Initial Catalog=Project3;User ID=sa; password = M@lab9310SSe*!";
-        private static string myConnectionString = "Data Source LFK-HP;Initial Catalog=Khidmat;Integrated Security=True";
-
+        //private static string myConnectionString = "Data Source LFK-HP;Initial Catalog=Khidmat;Integrated Security=True";
+       
         //Ali Connection String
-        //private static string myConnectionString = "server=DESKTOP-VEVG9RB;Initial Catalog=Project3;Integrated Security=True";
+        private static string myConnectionString = @"Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True";
+        
         //Alina connection string
         //private static string myConnectionString = @"server=DESKTOP-09G2FL8\SQLEXPRESS;Initial Catalog=Project4 ;Integrated Security=True";
+        
         public SqlConnection conn = new SqlConnection(myConnectionString);
         public SqlCommand cmd = new SqlCommand();
 
