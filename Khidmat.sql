@@ -1,74 +1,142 @@
-CREATE TABLE Operative_Procedure (
-  Procedure_ID INTEGER  NOT NULL   IDENTITY ,
-  Procedure_Name VARCHAR      ,
-PRIMARY KEY(Procedure_ID));
+CREATE TABLE [patientInfo] (
+	patientMR varchar(255) NOT NULL,
+	patientName string NOT NULL,
+	sex string NOT NULL,
+	age integer NOT NULL,
+	history string,
+	contact varchar(MAX),
+	occupation string,
+	address string,
+  CONSTRAINT [PK_PATIENTINFO] PRIMARY KEY CLUSTERED
+  (
+  [patientMR] ASC
+  ) WITH (IGNORE_DUP_KEY = OFF)
+
+)
+GO
+CREATE TABLE [operativeProcedurePatient] (
+	oppID varchar(255) NOT NULL,
+	patientMR varchar(255) NOT NULL,
+	procedureID varchar(255) NOT NULL,
+	diagnosisID varchar(255),
+	doctorID varchar(255) NOT NULL,
+	doctorComments string(MAX),
+	assistant string(255),
+	anaesthetist string(255),
+	anesthesiaType string(255),
+	dateOfAdmission date NOT NULL,
+	dateOfDischarge date,
+	wardNumber varchar(MAX),
+	roomNumber varchar(MAX),
+	bedNumber varchar(MAX),
+  CONSTRAINT [PK_OPERATIVEPROCEDUREPATIENT] PRIMARY KEY CLUSTERED
+  (
+  [oppID] ASC
+  ) WITH (IGNORE_DUP_KEY = OFF)
+
+)
+GO
+CREATE TABLE [operativeProcedure] (
+	procedureID varchar(255) NOT NULL,
+	operationName string NOT NULL,
+	subProcedure string,
+	description varchar(MAX),
+  CONSTRAINT [PK_OPERATIVEPROCEDURE] PRIMARY KEY CLUSTERED
+  (
+  [procedureID] ASC
+  ) WITH (IGNORE_DUP_KEY = OFF)
+
+)
+GO
+CREATE TABLE [diagnosis] (
+	diagnosisID varchar(MAX) NOT NULL,
+	diagnosisName string NOT NULL,
+	description string,
+  CONSTRAINT [PK_DIAGNOSIS] PRIMARY KEY CLUSTERED
+  (
+  [diagnosisID] ASC
+  ) WITH (IGNORE_DUP_KEY = OFF)
+
+)
+GO
+CREATE TABLE [followUps] (
+	followUpID varchar(255) NOT NULL,
+	oppID varchar(255) NOT NULL,
+	followUpDate date,
+  CONSTRAINT [PK_FOLLOWUPS] PRIMARY KEY CLUSTERED
+  (
+  [followUpID] ASC
+  ) WITH (IGNORE_DUP_KEY = OFF)
+
+)
+GO
+CREATE TABLE [operativeProcedureImages] (
+	imagesID varchar(255) NOT NULL,
+	patientMR varchar(255) NOT NULL,
+	procedureID varchar(255) NOT NULL,
+	image1 blob,
+  CONSTRAINT [PK_OPERATIVEPROCEDUREIMAGES] PRIMARY KEY CLUSTERED
+  (
+  [imagesID] ASC
+  ) WITH (IGNORE_DUP_KEY = OFF)
+
+)
+GO
+CREATE TABLE [doctor] (
+	doctorID varchar(255) NOT NULL,
+	doctorName string NOT NULL,
+	sex string NOT NULL,
+	specialization string NOT NULL,
+  CONSTRAINT [PK_DOCTOR] PRIMARY KEY CLUSTERED
+  (
+  [doctorID] ASC
+  ) WITH (IGNORE_DUP_KEY = OFF)
+
+)
+GO
+
+ALTER TABLE [operativeProcedurePatient] WITH CHECK ADD CONSTRAINT [operativeProcedurePatient_fk0] FOREIGN KEY ([patientMR]) REFERENCES [patientInfo]([patientMR])
+ON UPDATE CASCADE
+GO
+ALTER TABLE [operativeProcedurePatient] CHECK CONSTRAINT [operativeProcedurePatient_fk0]
+GO
+ALTER TABLE [operativeProcedurePatient] WITH CHECK ADD CONSTRAINT [operativeProcedurePatient_fk1] FOREIGN KEY ([procedureID]) REFERENCES [operativeProcedure]([procedureID])
+ON UPDATE CASCADE
+GO
+ALTER TABLE [operativeProcedurePatient] CHECK CONSTRAINT [operativeProcedurePatient_fk1]
+GO
+ALTER TABLE [operativeProcedurePatient] WITH CHECK ADD CONSTRAINT [operativeProcedurePatient_fk2] FOREIGN KEY ([diagnosisID]) REFERENCES [diagnosis]([diagnosisID])
+ON UPDATE CASCADE
+GO
+ALTER TABLE [operativeProcedurePatient] CHECK CONSTRAINT [operativeProcedurePatient_fk2]
+GO
+ALTER TABLE [operativeProcedurePatient] WITH CHECK ADD CONSTRAINT [operativeProcedurePatient_fk3] FOREIGN KEY ([doctorID]) REFERENCES [doctor]([doctorID])
+ON UPDATE CASCADE
+GO
+ALTER TABLE [operativeProcedurePatient] CHECK CONSTRAINT [operativeProcedurePatient_fk3]
 GO
 
 
 
-
-CREATE TABLE Doctor (
-  DoctorID VARCHAR  NOT NULL   IDENTITY ,
-  LoginPassword VARCHAR      ,
-PRIMARY KEY(DoctorID));
+ALTER TABLE [followUps] WITH CHECK ADD CONSTRAINT [followUps_fk0] FOREIGN KEY ([oppID]) REFERENCES [operativeProcedurePatient]([oppID])
+ON UPDATE CASCADE
+GO
+ALTER TABLE [followUps] CHECK CONSTRAINT [followUps_fk0]
 GO
 
-
-
-
-CREATE TABLE Pateint (
-  Pateint_ID INTEGER  NOT NULL   IDENTITY ,
-  Doctor_DoctorID VARCHAR  NOT NULL  ,
-  MR_Number VARCHAR    ,
-  Patient_Name VARCHAR    ,
-  Age VARCHAR    ,
-  Sex VARCHAR      ,
-PRIMARY KEY(Pateint_ID, Doctor_DoctorID)  ,
-  FOREIGN KEY(Doctor_DoctorID)
-    REFERENCES Doctor(DoctorID));
+ALTER TABLE [operativeProcedureImages] WITH CHECK ADD CONSTRAINT [operativeProcedureImages_fk0] FOREIGN KEY ([patientMR]) REFERENCES [patientInfo]([patientMR])
+ON UPDATE CASCADE
+GO
+ALTER TABLE [operativeProcedureImages] CHECK CONSTRAINT [operativeProcedureImages_fk0]
+GO
+ALTER TABLE [operativeProcedureImages] WITH CHECK ADD CONSTRAINT [operativeProcedureImages_fk1] FOREIGN KEY ([procedureID]) REFERENCES [operativeProcedure]([procedureID])
+ON UPDATE CASCADE
+GO
+ALTER TABLE [operativeProcedureImages] CHECK CONSTRAINT [operativeProcedureImages_fk1]
 GO
 
-
-CREATE INDEX Pateint_FKIndex1 ON Pateint (Doctor_DoctorID);
-GO
-
-
-CREATE INDEX IFK_Rel_02 ON Pateint (Doctor_DoctorID);
-GO
-
-
-CREATE TABLE Record (
-  Record_ID VARCHAR  NOT NULL   IDENTITY ,
-  Pateint_ID INTEGER  NOT NULL  ,
-  Pateint_Doctor_DoctorID VARCHAR  NOT NULL  ,
-  Operative_Procedure_Procedure_ID INTEGER  NOT NULL  ,
-  DOA DATE    ,
-  DOD DATE    ,
-  Brief_History VARCHAR    ,
-  Investigations VARCHAR    ,
-  Diagnosis VARCHAR    ,
-  Pics_OperativeProcedure BLOB    ,
-  Date_Procedure DATE    ,
-  Complications VARCHAR    ,
-  FollowUp VARCHAR      ,
-PRIMARY KEY(Record_ID, Pateint_ID, Pateint_Doctor_DoctorID, Operative_Procedure_Procedure_ID)    ,
-  FOREIGN KEY(Pateint_ID, Pateint_Doctor_DoctorID)
-    REFERENCES Pateint(Pateint_ID, Doctor_DoctorID),
-  FOREIGN KEY(Operative_Procedure_Procedure_ID)
-    REFERENCES Operative_Procedure(Procedure_ID));
-GO
-
-
-CREATE INDEX Record_FKIndex1 ON Record (Pateint_ID, Pateint_Doctor_DoctorID);
-GO
-CREATE INDEX Record_FKIndex2 ON Record (Operative_Procedure_Procedure_ID);
-GO
-
-
-CREATE INDEX IFK_Rel_03 ON Record (Pateint_ID, Pateint_Doctor_DoctorID);
-GO
-CREATE INDEX IFK_Rel_05 ON Record (Operative_Procedure_Procedure_ID);
-GO
-
+Alter table operativeProcedurePatient
+Add outcome varchar(255), 
+formtype varchar(255) not null
 
 

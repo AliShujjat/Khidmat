@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data;
-using System.ComponentModel;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Collections.Generic;
@@ -9,13 +8,14 @@ using System.Text;
 using System.Windows.Forms;
 using System.Threading.Tasks;
 
-namespace RestaurantManagement
+namespace Khidmat
 {
-    /* DbConnection
+    public class DbConnection
     {
         //Laiba Connection String
         //private static string myConnectionString = "Data Source=HU-DOPX-ML27;Initial Catalog=Project3;User ID=sa; password = M@lab9310SSe*!";
-        private static string myConnectionString = @"server=LFK-HP;Initial Catalog=Project3;Integrated Security=True";
+        private static string myConnectionString = "Data Source LFK-HP;Initial Catalog=Khidmat;Integrated Security=True";
+
         //Ali Connection String
         //private static string myConnectionString = "server=DESKTOP-VEVG9RB;Initial Catalog=Project3;Integrated Security=True";
         //Alina connection string
@@ -155,5 +155,5 @@ namespace RestaurantManagement
             return myConnectionString;
         }
     }
-     */
+     
 }
