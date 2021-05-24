@@ -23,10 +23,16 @@ namespace Khidmat
 
         private void LogInButton_Click(object sender, EventArgs e)
         {
-
-            MainScreen mainscreen = new MainScreen(this);
-            mainscreen.Show();
-            this.Hide();
+            if (IdTextBox.Text == "admin" && PasswordTextbox.Text == "admin")
+            {
+                MainScreen mainscreen = new MainScreen(this);
+                mainscreen.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Please enter ID and Password!");
+            }
         }
 
         private void LoginPaint(object sender, PaintEventArgs e)
