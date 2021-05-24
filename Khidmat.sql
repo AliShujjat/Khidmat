@@ -1,12 +1,12 @@
 CREATE TABLE [patientInfo] (
 	patientMR varchar(255) NOT NULL,
-	patientName string NOT NULL,
-	sex string NOT NULL,
+	patientName varchar(255) NOT NULL,
+	sex varchar(255) NOT NULL,
 	age integer NOT NULL,
-	history string,
+	history varchar(255),
 	contact varchar(MAX),
-	occupation string,
-	address string,
+	occupation varchar(255),
+	address varchar(255),
   CONSTRAINT [PK_PATIENTINFO] PRIMARY KEY CLUSTERED
   (
   [patientMR] ASC
@@ -20,10 +20,10 @@ CREATE TABLE [operativeProcedurePatient] (
 	procedureID varchar(255) NOT NULL,
 	diagnosisID varchar(255),
 	doctorID varchar(255) NOT NULL,
-	doctorComments string(MAX),
-	assistant string(255),
-	anaesthetist string(255),
-	anesthesiaType string(255),
+	doctorComments varchar(MAX),
+	assistant varchar(255),
+	anaesthetist varchar(255),
+	anesthesiaType varchar(255),
 	dateOfAdmission date NOT NULL,
 	dateOfDischarge date,
 	wardNumber varchar(MAX),
@@ -38,8 +38,8 @@ CREATE TABLE [operativeProcedurePatient] (
 GO
 CREATE TABLE [operativeProcedure] (
 	procedureID varchar(255) NOT NULL,
-	operationName string NOT NULL,
-	subProcedure string,
+	operationName varchar(255) NOT NULL,
+	subProcedure varchar(255),
 	description varchar(MAX),
   CONSTRAINT [PK_OPERATIVEPROCEDURE] PRIMARY KEY CLUSTERED
   (
@@ -49,9 +49,9 @@ CREATE TABLE [operativeProcedure] (
 )
 GO
 CREATE TABLE [diagnosis] (
-	diagnosisID varchar(MAX) NOT NULL,
-	diagnosisName string NOT NULL,
-	description string,
+	diagnosisID varchar(255) NOT NULL,
+	diagnosisName varchar(255) NOT NULL,
+	description varchar(255),
   CONSTRAINT [PK_DIAGNOSIS] PRIMARY KEY CLUSTERED
   (
   [diagnosisID] ASC
@@ -74,7 +74,7 @@ CREATE TABLE [operativeProcedureImages] (
 	imagesID varchar(255) NOT NULL,
 	patientMR varchar(255) NOT NULL,
 	procedureID varchar(255) NOT NULL,
-	image1 blob,
+	image1 image,
   CONSTRAINT [PK_OPERATIVEPROCEDUREIMAGES] PRIMARY KEY CLUSTERED
   (
   [imagesID] ASC
@@ -84,9 +84,9 @@ CREATE TABLE [operativeProcedureImages] (
 GO
 CREATE TABLE [doctor] (
 	doctorID varchar(255) NOT NULL,
-	doctorName string NOT NULL,
-	sex string NOT NULL,
-	specialization string NOT NULL,
+	doctorName varchar(255) NOT NULL,
+	sex varchar(255) NOT NULL,
+	specialization varchar(255) NOT NULL,
   CONSTRAINT [PK_DOCTOR] PRIMARY KEY CLUSTERED
   (
   [doctorID] ASC
