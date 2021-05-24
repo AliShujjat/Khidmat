@@ -36,19 +36,22 @@ namespace Khidmat
             this.LogInButton = new System.Windows.Forms.Button();
             this.Background = new System.Windows.Forms.PictureBox();
             this.LoginText = new System.Windows.Forms.PictureBox();
-            this.AdminPanelButton = new System.Windows.Forms.Button();
             this.PasswordTextbox = new System.Windows.Forms.TextBox();
+            this.PasswordCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.Background)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginText)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.label2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.label2.Location = new System.Drawing.Point(173, 353);
+            this.label2.Location = new System.Drawing.Point(175, 322);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 20);
             this.label2.TabIndex = 11;
@@ -56,11 +59,14 @@ namespace Khidmat
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.label1.Location = new System.Drawing.Point(173, 225);
+            this.label1.Location = new System.Drawing.Point(175, 209);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 20);
             this.label1.TabIndex = 10;
@@ -68,19 +74,28 @@ namespace Khidmat
             // 
             // IdTextBox
             // 
+            this.IdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.IdTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.IdTextBox.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.IdTextBox.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.IdTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.IdTextBox.Location = new System.Drawing.Point(173, 248);
+            this.IdTextBox.Location = new System.Drawing.Point(175, 243);
             this.IdTextBox.Name = "IdTextBox";
-            this.IdTextBox.Size = new System.Drawing.Size(282, 34);
+            this.IdTextBox.Size = new System.Drawing.Size(282, 29);
             this.IdTextBox.TabIndex = 8;
             // 
             // LogInButton
             // 
+            this.LogInButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LogInButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.LogInButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LogInButton.BackgroundImage")));
             this.LogInButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.LogInButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogInButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
+            this.LogInButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.LogInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogInButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.LogInButton.Location = new System.Drawing.Point(194, 453);
@@ -92,6 +107,9 @@ namespace Khidmat
             // 
             // Background
             // 
+            this.Background.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Background.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.Background.Location = new System.Drawing.Point(59, 55);
             this.Background.Name = "Background";
@@ -101,6 +119,9 @@ namespace Khidmat
             // 
             // LoginText
             // 
+            this.LoginText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LoginText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.LoginText.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LoginText.BackgroundImage")));
             this.LoginText.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -111,43 +132,52 @@ namespace Khidmat
             this.LoginText.TabIndex = 14;
             this.LoginText.TabStop = false;
             // 
-            // AdminPanelButton
-            // 
-            this.AdminPanelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.AdminPanelButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AdminPanelButton.BackgroundImage")));
-            this.AdminPanelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.AdminPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AdminPanelButton.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AdminPanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.AdminPanelButton.Location = new System.Drawing.Point(242, 527);
-            this.AdminPanelButton.Name = "AdminPanelButton";
-            this.AdminPanelButton.Size = new System.Drawing.Size(106, 29);
-            this.AdminPanelButton.TabIndex = 15;
-            this.AdminPanelButton.UseVisualStyleBackColor = false;
-            // 
             // PasswordTextbox
             // 
+            this.PasswordTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PasswordTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.PasswordTextbox.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PasswordTextbox.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.PasswordTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.PasswordTextbox.Location = new System.Drawing.Point(173, 376);
+            this.PasswordTextbox.Location = new System.Drawing.Point(175, 356);
             this.PasswordTextbox.Name = "PasswordTextbox";
-            this.PasswordTextbox.Size = new System.Drawing.Size(282, 34);
+            this.PasswordTextbox.Size = new System.Drawing.Size(282, 29);
             this.PasswordTextbox.TabIndex = 16;
+            // 
+            // PasswordCheckBox
+            // 
+            this.PasswordCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PasswordCheckBox.AutoSize = true;
+            this.PasswordCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
+            this.PasswordCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PasswordCheckBox.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PasswordCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(134)))), ((int)(((byte)(150)))));
+            this.PasswordCheckBox.Location = new System.Drawing.Point(175, 408);
+            this.PasswordCheckBox.Name = "PasswordCheckBox";
+            this.PasswordCheckBox.Size = new System.Drawing.Size(132, 20);
+            this.PasswordCheckBox.TabIndex = 17;
+            this.PasswordCheckBox.Text = "Show Password";
+            this.PasswordCheckBox.UseVisualStyleBackColor = false;
+            this.PasswordCheckBox.CheckedChanged += new System.EventHandler(this.PasswordCheckBox_CheckedChanged);
             // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(607, 648);
+            this.Controls.Add(this.PasswordCheckBox);
             this.Controls.Add(this.PasswordTextbox);
-            this.Controls.Add(this.AdminPanelButton);
             this.Controls.Add(this.LoginText);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.IdTextBox);
             this.Controls.Add(this.LogInButton);
             this.Controls.Add(this.Background);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "LogIn";
             this.Text = "LogIn";
             this.Load += new System.EventHandler(this.LogIn_Load);
@@ -167,7 +197,7 @@ namespace Khidmat
         private System.Windows.Forms.Button LogInButton;
         private System.Windows.Forms.PictureBox Background;
         private System.Windows.Forms.PictureBox LoginText;
-        private System.Windows.Forms.Button AdminPanelButton;
         private System.Windows.Forms.TextBox PasswordTextbox;
+        private System.Windows.Forms.CheckBox PasswordCheckBox;
     }
 }

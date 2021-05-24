@@ -16,7 +16,7 @@ namespace Khidmat
             InitializeComponent();
             new DropShadow().ApplyShadows(this);
             new DropShadow().ApplyShadows(Background);
-
+            PasswordTextbox.PasswordChar = '*';
 
 
         }
@@ -45,5 +45,16 @@ namespace Khidmat
         {
         }
 
+        private void PasswordCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (PasswordCheckBox.Checked)
+            {
+                PasswordTextbox.PasswordChar = '\0';
+            }
+            else
+            {
+                PasswordTextbox.PasswordChar = '*';
+            }
+        }
     }
 }
