@@ -21,8 +21,9 @@ namespace Khidmat
 
         private void LogOutButton_Click(object sender, EventArgs e)
         {
-            this.Close();
             loginReference.Show();
+
+            this.Close();
         }
 
         private void SearchButton_Click(object sender, EventArgs e)
@@ -34,8 +35,22 @@ namespace Khidmat
 
         private void AddPatientButton_Click(object sender, EventArgs e)
         {
-            AddNewPatientScreen addNewPatientScreen = new AddNewPatientScreen(this);
-            addNewPatientScreen.Show();
+            AddNewRecord addNewRecordScreen = new AddNewRecord(this);
+            addNewRecordScreen.Show();
+            this.Hide();
+        }
+
+        private void AdminPanelButton_Click(object sender, EventArgs e)
+        {
+            AdminPanel adminPanel = new AdminPanel(loginReference);
+            adminPanel.Show();
+            this.Close();
+        }
+
+        private void AddNewProcedureButton_Click(object sender, EventArgs e)
+        {
+            AddProcedure addProcedureScreen = new AddProcedure(this);
+            addProcedureScreen.Show();
             this.Hide();
         }
     }

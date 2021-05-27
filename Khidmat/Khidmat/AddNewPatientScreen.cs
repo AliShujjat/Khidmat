@@ -11,11 +11,11 @@ namespace Khidmat
     public partial class AddNewPatientScreen : Form
     {
 
-        private MainScreen mainscreenRef;
-        public AddNewPatientScreen( MainScreen main)
+        private AddNewRecord recordscreenref;
+        public AddNewPatientScreen( AddNewRecord main)
         {
             InitializeComponent();
-            mainscreenRef = main;
+            recordscreenref = main;
         }
         private void checkedListBox1_ItemCheck(object sender, ItemCheckEventArgs e)
         {
@@ -23,21 +23,27 @@ namespace Khidmat
                 if (ix != e.Index) GenderListBox.SetItemChecked(ix, false);
         }
 
-        private void CloseButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            mainscreenRef.Show();
-        }
-
-        private void SubmitButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            mainscreenRef.Show();
-        }
 
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AddNewPatientScreen_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            recordscreenref.Show();
+        }
+
+        private void SubmitButton_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            recordscreenref.Show();
         }
     }
 }

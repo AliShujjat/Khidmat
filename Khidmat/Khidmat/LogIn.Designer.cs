@@ -51,7 +51,7 @@ namespace Khidmat
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.label2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.label2.Location = new System.Drawing.Point(175, 322);
+            this.label2.Location = new System.Drawing.Point(175, 314);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 20);
             this.label2.TabIndex = 11;
@@ -94,6 +94,7 @@ namespace Khidmat
             this.LogInButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LogInButton.BackgroundImage")));
             this.LogInButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.LogInButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogInButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.LogInButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.LogInButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.LogInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -155,7 +156,7 @@ namespace Khidmat
             this.PasswordCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PasswordCheckBox.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.PasswordCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(134)))), ((int)(((byte)(150)))));
-            this.PasswordCheckBox.Location = new System.Drawing.Point(175, 408);
+            this.PasswordCheckBox.Location = new System.Drawing.Point(175, 402);
             this.PasswordCheckBox.Name = "PasswordCheckBox";
             this.PasswordCheckBox.Size = new System.Drawing.Size(132, 20);
             this.PasswordCheckBox.TabIndex = 17;

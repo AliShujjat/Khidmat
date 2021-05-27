@@ -10,9 +10,22 @@ namespace Khidmat
 {
     public partial class AddProcedure : Form
     {
-        public AddProcedure()
+        private MainScreen mainscreenRef;
+        public AddProcedure(MainScreen main)
         {
             InitializeComponent();
+            mainscreenRef = main;
+        }
+
+        private void SubmitButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            mainscreenRef.Show();
         }
     }
 }
