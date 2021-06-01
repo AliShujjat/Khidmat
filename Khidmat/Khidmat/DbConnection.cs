@@ -17,7 +17,7 @@ namespace Khidmat
         //private static string myConnectionString = "Data Source LFK-HP;Initial Catalog=Khidmat;Integrated Security=True";
        
         //Ali Connection String
-        private static string myConnectionString = @"Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True";
+        private static string myConnectionString = @"Server=DESKTOP-USS556H\SQLEXPRESS;Initial Catalog=Khidmat;Integrated Security=True";
         
         //Alina connection string
         //private static string myConnectionString = @"server=DESKTOP-09G2FL8\SQLEXPRESS;Initial Catalog=Project4 ;Integrated Security=True";
