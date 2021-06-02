@@ -14,6 +14,7 @@ namespace Khidmat
         public AddProcedure(MainScreen main)
         {
             InitializeComponent();
+            ListBoxSubProcedures.Text = "";
             mainscreenRef = main;
         }
 
@@ -26,6 +27,16 @@ namespace Khidmat
         {
             this.Close();
             mainscreenRef.Show();
+        }
+
+        private void ListBoxSubProcedures_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

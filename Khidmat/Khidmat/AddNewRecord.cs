@@ -38,5 +38,10 @@ namespace Khidmat
             this.Close();
             mainscreenRef.Show();
         }
+
+        private void OutcomeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

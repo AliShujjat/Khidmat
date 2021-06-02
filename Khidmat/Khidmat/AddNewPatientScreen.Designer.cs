@@ -60,7 +60,7 @@ namespace Khidmat
             this.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CancelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.CancelButton.Location = new System.Drawing.Point(262, 710);
-            this.CancelButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.CancelButton.Margin = new System.Windows.Forms.Padding(5);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(255, 138);
             this.CancelButton.TabIndex = 37;
@@ -75,7 +75,7 @@ namespace Khidmat
             this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.SubmitButton.Location = new System.Drawing.Point(713, 710);
-            this.SubmitButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.SubmitButton.Margin = new System.Windows.Forms.Padding(5);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(255, 123);
             this.SubmitButton.TabIndex = 36;
@@ -88,7 +88,7 @@ namespace Khidmat
             this.HospitalRegTextbox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.HospitalRegTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
             this.HospitalRegTextbox.Location = new System.Drawing.Point(598, 558);
-            this.HospitalRegTextbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.HospitalRegTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.HospitalRegTextbox.Name = "HospitalRegTextbox";
             this.HospitalRegTextbox.Size = new System.Drawing.Size(184, 37);
             this.HospitalRegTextbox.TabIndex = 51;
@@ -110,7 +110,7 @@ namespace Khidmat
             this.richTextBox1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.richTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
             this.richTextBox1.Location = new System.Drawing.Point(942, 419);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(5);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(176, 180);
             this.richTextBox1.TabIndex = 49;
@@ -134,7 +134,7 @@ namespace Khidmat
             this.ContactTextBox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ContactTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
             this.ContactTextBox.Location = new System.Drawing.Point(624, 296);
-            this.ContactTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ContactTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.ContactTextBox.Name = "ContactTextBox";
             this.ContactTextBox.Size = new System.Drawing.Size(204, 37);
             this.ContactTextBox.TabIndex = 47;
@@ -162,10 +162,11 @@ namespace Khidmat
             "Female",
             "Other"});
             this.GenderListBox.Location = new System.Drawing.Point(247, 402);
-            this.GenderListBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.GenderListBox.Margin = new System.Windows.Forms.Padding(5);
             this.GenderListBox.Name = "GenderListBox";
             this.GenderListBox.Size = new System.Drawing.Size(139, 106);
             this.GenderListBox.TabIndex = 45;
+            this.GenderListBox.SelectedIndexChanged += new System.EventHandler(this.GenderListBox_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -185,7 +186,7 @@ namespace Khidmat
             this.OccupationTextbox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.OccupationTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
             this.OccupationTextbox.Location = new System.Drawing.Point(600, 421);
-            this.OccupationTextbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.OccupationTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.OccupationTextbox.Name = "OccupationTextbox";
             this.OccupationTextbox.Size = new System.Drawing.Size(189, 37);
             this.OccupationTextbox.TabIndex = 43;
@@ -208,7 +209,7 @@ namespace Khidmat
             this.AgeTextBox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.AgeTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
             this.AgeTextBox.Location = new System.Drawing.Point(942, 296);
-            this.AgeTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.AgeTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.AgeTextBox.Name = "AgeTextBox";
             this.AgeTextBox.Size = new System.Drawing.Size(97, 37);
             this.AgeTextBox.TabIndex = 41;
@@ -231,7 +232,7 @@ namespace Khidmat
             this.NameTextBox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.NameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
             this.NameTextBox.Location = new System.Drawing.Point(244, 296);
-            this.NameTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.NameTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(210, 37);
             this.NameTextBox.TabIndex = 39;
@@ -265,7 +266,7 @@ namespace Khidmat
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(70, 203);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1103, 462);
             this.pictureBox1.TabIndex = 53;
@@ -307,7 +308,7 @@ namespace Khidmat
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "AddNewPatientScreen";
             this.Text = "Cancel";
             this.Load += new System.EventHandler(this.AddNewPatientScreen_Load);
