@@ -31,5 +31,12 @@ namespace Khidmat
             addNewUserScreen.Show();
             this.Hide();
         }
+
+        private void EditUserButton_Click(object sender, EventArgs e)
+        {
+            SearchUsers searchUserScreen = new SearchUsers(this);
+            searchUserScreen.Show();
+            this.Hide();
+        }
     }
 }

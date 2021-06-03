@@ -61,7 +61,7 @@
   <data name="AddUserButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABOYAAAGACAYAAAAJaW3KAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAA/7JJREFUeF7s/Xm8L1dV543//nie39BPT7bdduOEIqIyiCIKggICIpOK2orzgEO3
+        vwAADr8BOAVTJAAA/7JJREFUeF7s/Xm8L1dV543//nie39BPT7bdduOEIqIyiCIKggICIpOK2orzgEO3
         3dp29/O07QAkICgzJGSeQAWSMDiQkJubyJThJiqTAiLzDJknSG7ucE791mfVWrs+e9XaVfU95ya5kcqL
         92utvfau+n7POd977q03a1f9vz59/f5uZWVlZWVlZWVlZWVlZWVlZWVl5c5lFXMrKysrKysrKysrKysr
         KysrKyt3AauYW1lZWVlZWVlZWVlZWVlZWVlZuQtYxdzKysrKysrKysrKysrKysrKyspdwCrmVlZWVlZW
@@ -3975,7 +3975,7 @@
   <data name="LogOutButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABOQAAAE2CAYAAADBD02fAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAA/7JJREFUeF7sveejHbdx/52/80nyS+LETZZlWb03qvduVasXq7jFlovsxLItWVbv
+        vQAADr0BR/uQrQAA/7JJREFUeF7sveejHbdx/52/80nyS+LETZZlWb03qvduVasXq7jFlovsxLItWVbv
         pERSjb1XUZLzYh/MAAMMZge7e849l/eS/L74BB27Z88eWveTAfBPm/Z82a00m2dh7/KxZZSvlod9Tp1A
         bRpdZ9tbYxJbG3mvzmu39UNztMZ72Dktuu+UPrps22ydjBdsu4dtHxqv62fFG2vn1m2tOkHaKNV53UfX
         tdq8eov0m7W/V7Z5m0pesGWNbptlHEHtY32EWfrpvnactNt+un1qna4fG+e12/qhOVrjPeycFt13Sh9d
@@ -5294,7 +5294,7 @@
   <data name="EditUserButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABN0AAAGdCAYAAAAmMgVAAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAA/7JJREFUeF7s/XmULd9134fljyR2LCWOrSm2BityIsdyHEu2ZS97JXGyEouWLMXK
+        vwAADr8BOAVTJAAA/7JJREFUeF7s/XmULd9134fljyR2LCWOrSm2BityIsdyHEu2ZS97JXGyEouWLMXK
         cjzIS3IUL1mmpEiKJA4gCXDCPIMgMREgSHAAQBDgBBEESAIkQGL6/QC83/x7c7957De/7n7T71XOd5+z
         T+2za58a7q3bfbvf/uOzzlh1b9etW7fOp/ep8z86e22ncRzHcRzHcRzHcRzHcRxnPly6OY7jOI7jOI7j
         OI7jOM7MuHRzHMdxHMdxHMdxHMdxnJlx6eY4juM4juM4juM4juM4M+PSzXEcx3Ecx3Ecx3Ecx3FmxqWb

@@ -85,6 +85,7 @@ namespace Khidmat
             this.EditUserButton.Size = new System.Drawing.Size(541, 187);
             this.EditUserButton.TabIndex = 19;
             this.EditUserButton.UseVisualStyleBackColor = false;
+            this.EditUserButton.Click += new System.EventHandler(this.EditUserButton_Click);
             // 
             // AdminPanelText
             // 
