@@ -154,6 +154,7 @@ namespace Khidmat
             // GenderListBox
             // 
             this.GenderListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
+            this.GenderListBox.CheckOnClick = true;
             this.GenderListBox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.GenderListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
             this.GenderListBox.FormattingEnabled = true;

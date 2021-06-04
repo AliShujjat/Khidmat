@@ -17,8 +17,6 @@ namespace Khidmat
             loginReference = login;
         }
 
-
-
         private void LogOutButton_Click(object sender, EventArgs e)
         {
             loginReference.Show();
@@ -52,6 +50,11 @@ namespace Khidmat
             AddProcedure addProcedureScreen = new AddProcedure(this);
             addProcedureScreen.Show();
             this.Hide();
+        }
+
+        private void MainScreen_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

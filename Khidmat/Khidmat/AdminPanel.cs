@@ -27,7 +27,7 @@ namespace Khidmat
 
         private void AddUserButton_Click(object sender, EventArgs e)
         {
-            AddNewUser addNewUserScreen = new AddNewUser(this);
+            AddNewUser addNewUserScreen = new AddNewUser();//this);
             addNewUserScreen.Show();
             this.Hide();
         }

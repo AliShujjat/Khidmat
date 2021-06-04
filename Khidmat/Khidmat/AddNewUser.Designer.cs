@@ -78,7 +78,7 @@ namespace Khidmat
             this.SpecializationTextBox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.SpecializationTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
             this.SpecializationTextBox.Location = new System.Drawing.Point(502, 528);
-            this.SpecializationTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.SpecializationTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.SpecializationTextBox.Name = "SpecializationTextBox";
             this.SpecializationTextBox.Size = new System.Drawing.Size(284, 37);
             this.SpecializationTextBox.TabIndex = 70;
@@ -100,7 +100,7 @@ namespace Khidmat
             this.ContactTextBox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ContactTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
             this.ContactTextBox.Location = new System.Drawing.Point(730, 286);
-            this.ContactTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ContactTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.ContactTextBox.Name = "ContactTextBox";
             this.ContactTextBox.Size = new System.Drawing.Size(204, 37);
             this.ContactTextBox.TabIndex = 66;
@@ -120,6 +120,7 @@ namespace Khidmat
             // GenderListBox
             // 
             this.GenderListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
+            this.GenderListBox.CheckOnClick = true;
             this.GenderListBox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.GenderListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
             this.GenderListBox.FormattingEnabled = true;
@@ -128,10 +129,11 @@ namespace Khidmat
             "Female",
             "Other"});
             this.GenderListBox.Location = new System.Drawing.Point(338, 371);
-            this.GenderListBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.GenderListBox.Margin = new System.Windows.Forms.Padding(5);
             this.GenderListBox.Name = "GenderListBox";
             this.GenderListBox.Size = new System.Drawing.Size(139, 106);
             this.GenderListBox.TabIndex = 64;
+            this.GenderListBox.SelectedIndexChanged += new System.EventHandler(this.GenderListBox_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -151,7 +153,7 @@ namespace Khidmat
             this.NameTextBox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.NameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
             this.NameTextBox.Location = new System.Drawing.Point(338, 286);
-            this.NameTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.NameTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(210, 37);
             this.NameTextBox.TabIndex = 58;
@@ -176,7 +178,7 @@ namespace Khidmat
             this.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CancelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.CancelButton.Location = new System.Drawing.Point(262, 714);
-            this.CancelButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.CancelButton.Margin = new System.Windows.Forms.Padding(5);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(255, 138);
             this.CancelButton.TabIndex = 56;
@@ -191,18 +193,19 @@ namespace Khidmat
             this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.SubmitButton.Location = new System.Drawing.Point(595, 722);
-            this.SubmitButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.SubmitButton.Margin = new System.Windows.Forms.Padding(5);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(255, 123);
             this.SubmitButton.TabIndex = 55;
             this.SubmitButton.UseVisualStyleBackColor = true;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(110, 194);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(899, 462);
             this.pictureBox1.TabIndex = 72;
@@ -214,9 +217,11 @@ namespace Khidmat
             this.DOBPicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.DOBPicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.DOBPicker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
+            this.DOBPicker.CustomFormat = "yyyy-dd-MM";
             this.DOBPicker.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DOBPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DOBPicker.Location = new System.Drawing.Point(730, 392);
-            this.DOBPicker.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.DOBPicker.Margin = new System.Windows.Forms.Padding(5);
             this.DOBPicker.Name = "DOBPicker";
             this.DOBPicker.Size = new System.Drawing.Size(204, 37);
             this.DOBPicker.TabIndex = 75;
@@ -254,7 +259,7 @@ namespace Khidmat
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "AddNewUser";
             this.Text = "Add New User";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

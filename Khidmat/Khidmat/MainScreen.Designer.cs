@@ -43,9 +43,10 @@ namespace Khidmat
             this.WelcomeText.AutoSize = true;
             this.WelcomeText.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.WelcomeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.WelcomeText.Location = new System.Drawing.Point(143, 65);
+            this.WelcomeText.Location = new System.Drawing.Point(232, 104);
+            this.WelcomeText.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.WelcomeText.Name = "WelcomeText";
-            this.WelcomeText.Size = new System.Drawing.Size(408, 40);
+            this.WelcomeText.Size = new System.Drawing.Size(657, 65);
             this.WelcomeText.TabIndex = 0;
             this.WelcomeText.Text = "Welcome Dr. Imtiaz! ";
             // 
@@ -59,9 +60,10 @@ namespace Khidmat
             this.SearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SearchButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.SearchButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.SearchButton.Location = new System.Drawing.Point(96, 311);
+            this.SearchButton.Location = new System.Drawing.Point(156, 498);
+            this.SearchButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(541, 187);
+            this.SearchButton.Size = new System.Drawing.Size(879, 299);
             this.SearchButton.TabIndex = 2;
             this.SearchButton.UseVisualStyleBackColor = false;
             this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
@@ -75,9 +77,10 @@ namespace Khidmat
             this.LogOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogOutButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LogOutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.LogOutButton.Location = new System.Drawing.Point(247, 664);
+            this.LogOutButton.Location = new System.Drawing.Point(401, 1062);
+            this.LogOutButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.LogOutButton.Name = "LogOutButton";
-            this.LogOutButton.Size = new System.Drawing.Size(229, 66);
+            this.LogOutButton.Size = new System.Drawing.Size(372, 106);
             this.LogOutButton.TabIndex = 3;
             this.LogOutButton.UseVisualStyleBackColor = false;
             this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
@@ -93,9 +96,10 @@ namespace Khidmat
             this.AddRecordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddRecordButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.AddRecordButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.AddRecordButton.Location = new System.Drawing.Point(96, 148);
+            this.AddRecordButton.Location = new System.Drawing.Point(156, 237);
+            this.AddRecordButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.AddRecordButton.Name = "AddRecordButton";
-            this.AddRecordButton.Size = new System.Drawing.Size(534, 168);
+            this.AddRecordButton.Size = new System.Drawing.Size(868, 269);
             this.AddRecordButton.TabIndex = 8;
             this.AddRecordButton.UseVisualStyleBackColor = false;
             this.AddRecordButton.Click += new System.EventHandler(this.AddPatientButton_Click);
@@ -111,9 +115,10 @@ namespace Khidmat
             this.AdminPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AdminPanelButton.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AdminPanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.AdminPanelButton.Location = new System.Drawing.Point(305, 736);
+            this.AdminPanelButton.Location = new System.Drawing.Point(496, 1178);
+            this.AdminPanelButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.AdminPanelButton.Name = "AdminPanelButton";
-            this.AdminPanelButton.Size = new System.Drawing.Size(106, 29);
+            this.AdminPanelButton.Size = new System.Drawing.Size(172, 46);
             this.AdminPanelButton.TabIndex = 16;
             this.AdminPanelButton.UseVisualStyleBackColor = false;
             this.AdminPanelButton.Click += new System.EventHandler(this.AdminPanelButton_Click);
@@ -129,27 +134,30 @@ namespace Khidmat
             this.AddNewProcedureButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddNewProcedureButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.AddNewProcedureButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.AddNewProcedureButton.Location = new System.Drawing.Point(103, 491);
+            this.AddNewProcedureButton.Location = new System.Drawing.Point(167, 786);
+            this.AddNewProcedureButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.AddNewProcedureButton.Name = "AddNewProcedureButton";
-            this.AddNewProcedureButton.Size = new System.Drawing.Size(534, 184);
+            this.AddNewProcedureButton.Size = new System.Drawing.Size(868, 294);
             this.AddNewProcedureButton.TabIndex = 17;
             this.AddNewProcedureButton.UseVisualStyleBackColor = false;
             this.AddNewProcedureButton.Click += new System.EventHandler(this.AddNewProcedureButton_Click);
             // 
             // MainScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(719, 777);
+            this.ClientSize = new System.Drawing.Size(1168, 1243);
             this.Controls.Add(this.AddNewProcedureButton);
             this.Controls.Add(this.AdminPanelButton);
             this.Controls.Add(this.AddRecordButton);
             this.Controls.Add(this.LogOutButton);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.WelcomeText);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "MainScreen";
             this.Text = "MainScreen";
+            this.Load += new System.EventHandler(this.MainScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
