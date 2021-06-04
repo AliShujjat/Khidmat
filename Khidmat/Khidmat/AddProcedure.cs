@@ -14,7 +14,7 @@ namespace Khidmat
         public AddProcedure(MainScreen main)
         {
             InitializeComponent();
-            ListBoxSubProcedures.Text = "";
+            //ListBoxSubProcedures.Text = "";
             mainscreenRef = main;
         }
 

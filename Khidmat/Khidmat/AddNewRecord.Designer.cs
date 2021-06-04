@@ -79,7 +79,7 @@
             this.RoomNumberTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.RoomNumberTextbox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.RoomNumberTextbox.Location = new System.Drawing.Point(725, 635);
-            this.RoomNumberTextbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.RoomNumberTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.RoomNumberTextbox.Name = "RoomNumberTextbox";
             this.RoomNumberTextbox.Size = new System.Drawing.Size(113, 37);
             this.RoomNumberTextbox.TabIndex = 26;
@@ -101,7 +101,7 @@
             this.BedNumberTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.BedNumberTextbox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BedNumberTextbox.Location = new System.Drawing.Point(1056, 635);
-            this.BedNumberTextbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.BedNumberTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.BedNumberTextbox.Name = "BedNumberTextbox";
             this.BedNumberTextbox.Size = new System.Drawing.Size(129, 37);
             this.BedNumberTextbox.TabIndex = 24;
@@ -124,7 +124,7 @@
             this.WardTextbox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.WardTextbox.ForeColor = System.Drawing.SystemColors.Window;
             this.WardTextbox.Location = new System.Drawing.Point(346, 635);
-            this.WardTextbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.WardTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.WardTextbox.Name = "WardTextbox";
             this.WardTextbox.Size = new System.Drawing.Size(147, 37);
             this.WardTextbox.TabIndex = 15;
@@ -146,7 +146,7 @@
             this.DescriptionTextBox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DescriptionTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
             this.DescriptionTextBox.Location = new System.Drawing.Point(973, 403);
-            this.DescriptionTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.DescriptionTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.DescriptionTextBox.Name = "DescriptionTextBox";
             this.DescriptionTextBox.Size = new System.Drawing.Size(292, 164);
             this.DescriptionTextBox.TabIndex = 20;
@@ -160,7 +160,7 @@
             this.DODPicker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
             this.DODPicker.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DODPicker.Location = new System.Drawing.Point(460, 501);
-            this.DODPicker.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.DODPicker.Margin = new System.Windows.Forms.Padding(5);
             this.DODPicker.Name = "DODPicker";
             this.DODPicker.Size = new System.Drawing.Size(184, 37);
             this.DODPicker.TabIndex = 18;
@@ -173,7 +173,7 @@
             this.DOAPicker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
             this.DOAPicker.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DOAPicker.Location = new System.Drawing.Point(465, 421);
-            this.DOAPicker.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.DOAPicker.Margin = new System.Windows.Forms.Padding(5);
             this.DOAPicker.Name = "DOAPicker";
             this.DOAPicker.Size = new System.Drawing.Size(180, 37);
             this.DOAPicker.TabIndex = 17;
@@ -221,7 +221,7 @@
             this.ProcedureComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
             this.ProcedureComboBox.FormattingEnabled = true;
             this.ProcedureComboBox.Location = new System.Drawing.Point(353, 872);
-            this.ProcedureComboBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ProcedureComboBox.Margin = new System.Windows.Forms.Padding(5);
             this.ProcedureComboBox.Name = "ProcedureComboBox";
             this.ProcedureComboBox.Size = new System.Drawing.Size(322, 37);
             this.ProcedureComboBox.TabIndex = 28;
@@ -235,7 +235,7 @@
             this.SubProcedureCheckBox.Items.AddRange(new object[] {
             "Enter Procedure First"});
             this.SubProcedureCheckBox.Location = new System.Drawing.Point(973, 878);
-            this.SubProcedureCheckBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.SubProcedureCheckBox.Margin = new System.Windows.Forms.Padding(5);
             this.SubProcedureCheckBox.Name = "SubProcedureCheckBox";
             this.SubProcedureCheckBox.Size = new System.Drawing.Size(292, 274);
             this.SubProcedureCheckBox.TabIndex = 29;
@@ -258,7 +258,7 @@
             this.HospitalRegTextbox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.HospitalRegTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
             this.HospitalRegTextbox.Location = new System.Drawing.Point(1040, 227);
-            this.HospitalRegTextbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.HospitalRegTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.HospitalRegTextbox.Name = "HospitalRegTextbox";
             this.HospitalRegTextbox.Size = new System.Drawing.Size(253, 37);
             this.HospitalRegTextbox.TabIndex = 32;
@@ -282,7 +282,7 @@
             this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.SubmitButton.Location = new System.Drawing.Point(793, 1544);
-            this.SubmitButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.SubmitButton.Margin = new System.Windows.Forms.Padding(5);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(255, 123);
             this.SubmitButton.TabIndex = 34;
@@ -296,7 +296,7 @@
             this.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CancelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.CancelButton.Location = new System.Drawing.Point(353, 1536);
-            this.CancelButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.CancelButton.Margin = new System.Windows.Forms.Padding(5);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(255, 138);
             this.CancelButton.TabIndex = 35;
@@ -308,7 +308,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(132, 341);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1214, 416);
             this.pictureBox1.TabIndex = 36;
@@ -348,7 +348,7 @@
             "Record of Operations/Procedures",
             "Record of Emergency Procedures"});
             this.FormTypeComboBox.Location = new System.Drawing.Point(317, 227);
-            this.FormTypeComboBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.FormTypeComboBox.Margin = new System.Windows.Forms.Padding(5);
             this.FormTypeComboBox.Name = "FormTypeComboBox";
             this.FormTypeComboBox.Size = new System.Drawing.Size(327, 37);
             this.FormTypeComboBox.TabIndex = 39;
@@ -381,7 +381,7 @@
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(132, 806);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(1214, 752);
             this.pictureBox2.TabIndex = 41;
@@ -404,7 +404,7 @@
             this.DiagnosisTextBox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DiagnosisTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
             this.DiagnosisTextBox.Location = new System.Drawing.Point(353, 941);
-            this.DiagnosisTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.DiagnosisTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.DiagnosisTextBox.Name = "DiagnosisTextBox";
             this.DiagnosisTextBox.Size = new System.Drawing.Size(322, 182);
             this.DiagnosisTextBox.TabIndex = 44;
@@ -441,7 +441,7 @@
             "Follow Up",
             "Other"});
             this.OutcomeComboBox.Location = new System.Drawing.Point(346, 1160);
-            this.OutcomeComboBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.OutcomeComboBox.Margin = new System.Windows.Forms.Padding(5);
             this.OutcomeComboBox.Name = "OutcomeComboBox";
             this.OutcomeComboBox.Size = new System.Drawing.Size(337, 37);
             this.OutcomeComboBox.TabIndex = 47;
@@ -464,7 +464,7 @@
             this.AssistantTextBox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AssistantTextBox.ForeColor = System.Drawing.SystemColors.Window;
             this.AssistantTextBox.Location = new System.Drawing.Point(346, 1309);
-            this.AssistantTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.AssistantTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.AssistantTextBox.Name = "AssistantTextBox";
             this.AssistantTextBox.Size = new System.Drawing.Size(337, 37);
             this.AssistantTextBox.TabIndex = 49;
@@ -512,7 +512,7 @@
             "Follow Up",
             "Other"});
             this.DoctorComboBox.Location = new System.Drawing.Point(346, 1232);
-            this.DoctorComboBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.DoctorComboBox.Margin = new System.Windows.Forms.Padding(5);
             this.DoctorComboBox.Name = "DoctorComboBox";
             this.DoctorComboBox.Size = new System.Drawing.Size(337, 37);
             this.DoctorComboBox.TabIndex = 51;
@@ -535,7 +535,7 @@
             this.AnaesthesiaTypeTextBox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AnaesthesiaTypeTextBox.ForeColor = System.Drawing.SystemColors.Window;
             this.AnaesthesiaTypeTextBox.Location = new System.Drawing.Point(928, 1306);
-            this.AnaesthesiaTypeTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.AnaesthesiaTypeTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.AnaesthesiaTypeTextBox.Name = "AnaesthesiaTypeTextBox";
             this.AnaesthesiaTypeTextBox.Size = new System.Drawing.Size(337, 37);
             this.AnaesthesiaTypeTextBox.TabIndex = 52;
@@ -546,7 +546,7 @@
             this.AnaesthetistTextBox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AnaesthetistTextBox.ForeColor = System.Drawing.SystemColors.Window;
             this.AnaesthetistTextBox.Location = new System.Drawing.Point(928, 1232);
-            this.AnaesthetistTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.AnaesthetistTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.AnaesthetistTextBox.Name = "AnaesthetistTextBox";
             this.AnaesthetistTextBox.Size = new System.Drawing.Size(337, 37);
             this.AnaesthetistTextBox.TabIndex = 54;
@@ -580,7 +580,7 @@
             this.ImageButton.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ImageButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
             this.ImageButton.Location = new System.Drawing.Point(606, 1406);
-            this.ImageButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ImageButton.Margin = new System.Windows.Forms.Padding(5);
             this.ImageButton.Name = "ImageButton";
             this.ImageButton.Size = new System.Drawing.Size(234, 99);
             this.ImageButton.TabIndex = 58;
@@ -636,7 +636,7 @@
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.SubmitButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "AddNewRecord";
             this.Text = "Add New Record";
             this.Load += new System.EventHandler(this.AddNewRecord_Load);

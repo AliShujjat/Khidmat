@@ -52,9 +52,10 @@ namespace Khidmat
             // 
             this.label2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.label2.Location = new System.Drawing.Point(107, 121);
+            this.label2.Location = new System.Drawing.Point(174, 194);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 23);
+            this.label2.Size = new System.Drawing.Size(184, 37);
             this.label2.TabIndex = 73;
             this.label2.Text = "User Details";
             // 
@@ -64,9 +65,10 @@ namespace Khidmat
             this.FormTitleText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.FormTitleText.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.FormTitleText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.FormTitleText.Location = new System.Drawing.Point(220, 37);
+            this.FormTitleText.Location = new System.Drawing.Point(358, 59);
+            this.FormTitleText.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.FormTitleText.Name = "FormTitleText";
-            this.FormTitleText.Size = new System.Drawing.Size(278, 40);
+            this.FormTitleText.Size = new System.Drawing.Size(446, 65);
             this.FormTitleText.TabIndex = 71;
             this.FormTitleText.Text = "Add New User";
             // 
@@ -75,18 +77,20 @@ namespace Khidmat
             this.SpecializationTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.SpecializationTextBox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.SpecializationTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.SpecializationTextBox.Location = new System.Drawing.Point(309, 330);
+            this.SpecializationTextBox.Location = new System.Drawing.Point(502, 528);
+            this.SpecializationTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.SpecializationTextBox.Name = "SpecializationTextBox";
-            this.SpecializationTextBox.Size = new System.Drawing.Size(176, 26);
+            this.SpecializationTextBox.Size = new System.Drawing.Size(284, 37);
             this.SpecializationTextBox.TabIndex = 70;
             // 
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.label10.Location = new System.Drawing.Point(161, 330);
+            this.label10.Location = new System.Drawing.Point(262, 528);
+            this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(132, 27);
+            this.label10.Size = new System.Drawing.Size(214, 43);
             this.label10.TabIndex = 69;
             this.label10.Text = "Specialization:";
             // 
@@ -95,9 +99,10 @@ namespace Khidmat
             this.ContactTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.ContactTextBox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ContactTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.ContactTextBox.Location = new System.Drawing.Point(449, 179);
+            this.ContactTextBox.Location = new System.Drawing.Point(730, 286);
+            this.ContactTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.ContactTextBox.Name = "ContactTextBox";
-            this.ContactTextBox.Size = new System.Drawing.Size(127, 26);
+            this.ContactTextBox.Size = new System.Drawing.Size(204, 37);
             this.ContactTextBox.TabIndex = 66;
             // 
             // label3
@@ -105,9 +110,10 @@ namespace Khidmat
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.label3.Location = new System.Drawing.Point(366, 183);
+            this.label3.Location = new System.Drawing.Point(595, 293);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 18);
+            this.label3.Size = new System.Drawing.Size(125, 29);
             this.label3.TabIndex = 65;
             this.label3.Text = "Contact:";
             // 
@@ -121,9 +127,10 @@ namespace Khidmat
             "Male",
             "Female",
             "Other"});
-            this.GenderListBox.Location = new System.Drawing.Point(208, 232);
+            this.GenderListBox.Location = new System.Drawing.Point(338, 371);
+            this.GenderListBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.GenderListBox.Name = "GenderListBox";
-            this.GenderListBox.Size = new System.Drawing.Size(87, 67);
+            this.GenderListBox.Size = new System.Drawing.Size(139, 106);
             this.GenderListBox.TabIndex = 64;
             // 
             // label4
@@ -131,9 +138,10 @@ namespace Khidmat
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.label4.Location = new System.Drawing.Point(148, 253);
+            this.label4.Location = new System.Drawing.Point(240, 405);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 18);
+            this.label4.Size = new System.Drawing.Size(72, 29);
             this.label4.TabIndex = 63;
             this.label4.Text = "Sex:";
             // 
@@ -142,9 +150,10 @@ namespace Khidmat
             this.NameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.NameTextBox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.NameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.NameTextBox.Location = new System.Drawing.Point(208, 179);
+            this.NameTextBox.Location = new System.Drawing.Point(338, 286);
+            this.NameTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.Size = new System.Drawing.Size(131, 26);
+            this.NameTextBox.Size = new System.Drawing.Size(210, 37);
             this.NameTextBox.TabIndex = 58;
             // 
             // NameText
@@ -152,9 +161,10 @@ namespace Khidmat
             this.NameText.AutoSize = true;
             this.NameText.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.NameText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.NameText.Location = new System.Drawing.Point(107, 183);
+            this.NameText.Location = new System.Drawing.Point(174, 293);
+            this.NameText.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.NameText.Name = "NameText";
-            this.NameText.Size = new System.Drawing.Size(95, 18);
+            this.NameText.Size = new System.Drawing.Size(157, 29);
             this.NameText.TabIndex = 57;
             this.NameText.Text = "Full Name:";
             // 
@@ -165,9 +175,10 @@ namespace Khidmat
             this.CancelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CancelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.CancelButton.Location = new System.Drawing.Point(161, 446);
+            this.CancelButton.Location = new System.Drawing.Point(262, 714);
+            this.CancelButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(157, 86);
+            this.CancelButton.Size = new System.Drawing.Size(255, 138);
             this.CancelButton.TabIndex = 56;
             this.CancelButton.UseVisualStyleBackColor = true;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
@@ -179,9 +190,10 @@ namespace Khidmat
             this.SubmitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.SubmitButton.Location = new System.Drawing.Point(366, 451);
+            this.SubmitButton.Location = new System.Drawing.Point(595, 722);
+            this.SubmitButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(157, 77);
+            this.SubmitButton.Size = new System.Drawing.Size(255, 123);
             this.SubmitButton.TabIndex = 55;
             this.SubmitButton.UseVisualStyleBackColor = true;
             // 
@@ -189,9 +201,10 @@ namespace Khidmat
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(68, 121);
+            this.pictureBox1.Location = new System.Drawing.Point(110, 194);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(553, 289);
+            this.pictureBox1.Size = new System.Drawing.Size(899, 462);
             this.pictureBox1.TabIndex = 72;
             this.pictureBox1.TabStop = false;
             // 
@@ -202,9 +215,10 @@ namespace Khidmat
             this.DOBPicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.DOBPicker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
             this.DOBPicker.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DOBPicker.Location = new System.Drawing.Point(449, 245);
+            this.DOBPicker.Location = new System.Drawing.Point(730, 392);
+            this.DOBPicker.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.DOBPicker.Name = "DOBPicker";
-            this.DOBPicker.Size = new System.Drawing.Size(127, 26);
+            this.DOBPicker.Size = new System.Drawing.Size(204, 37);
             this.DOBPicker.TabIndex = 75;
             // 
             // label6
@@ -212,18 +226,19 @@ namespace Khidmat
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.label6.Location = new System.Drawing.Point(325, 251);
+            this.label6.Location = new System.Drawing.Point(528, 402);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 18);
+            this.label6.Size = new System.Drawing.Size(194, 29);
             this.label6.TabIndex = 74;
             this.label6.Text = "Date of Birth:";
             // 
             // AddNewUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(690, 544);
+            this.ClientSize = new System.Drawing.Size(1121, 870);
             this.Controls.Add(this.DOBPicker);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
@@ -239,6 +254,7 @@ namespace Khidmat
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "AddNewUser";
             this.Text = "Add New User";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
