@@ -281,7 +281,7 @@
             this.SubmitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.SubmitButton.Location = new System.Drawing.Point(793, 1544);
+            this.SubmitButton.Location = new System.Drawing.Point(802, 1559);
             this.SubmitButton.Margin = new System.Windows.Forms.Padding(5);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(255, 123);
@@ -295,7 +295,7 @@
             this.CancelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CancelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.CancelButton.Location = new System.Drawing.Point(353, 1536);
+            this.CancelButton.Location = new System.Drawing.Point(362, 1551);
             this.CancelButton.Margin = new System.Windows.Forms.Padding(5);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(255, 138);

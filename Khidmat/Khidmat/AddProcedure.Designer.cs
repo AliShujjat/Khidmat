@@ -37,7 +37,7 @@ namespace Khidmat
             this.CancelButton = new System.Windows.Forms.Button();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.WelcomeText = new System.Windows.Forms.Label();
-            this.ListViewSubProcedures = new System.Windows.Forms.ListView();
+            this.ListBoxSubProcedures = new System.Windows.Forms.ListView();
             this.labelAddSubProcedure = new System.Windows.Forms.Label();
             this.TextboxAddSubProcedure = new System.Windows.Forms.TextBox();
             this.AddButton = new System.Windows.Forms.Button();
@@ -134,15 +134,16 @@ namespace Khidmat
             this.WelcomeText.TabIndex = 38;
             this.WelcomeText.Text = "Add New Procedure";
             // 
-            // ListViewSubProcedures
+            // ListBoxSubProcedures
             // 
-            this.ListViewSubProcedures.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.ListViewSubProcedures.HideSelection = false;
-            this.ListViewSubProcedures.Location = new System.Drawing.Point(362, 536);
-            this.ListViewSubProcedures.Name = "ListViewSubProcedures";
-            this.ListViewSubProcedures.Size = new System.Drawing.Size(357, 194);
-            this.ListViewSubProcedures.TabIndex = 39;
-            this.ListViewSubProcedures.UseCompatibleStateImageBehavior = false;
+            this.ListBoxSubProcedures.Alignment = System.Windows.Forms.ListViewAlignment.Left;
+            this.ListBoxSubProcedures.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
+            this.ListBoxSubProcedures.HideSelection = false;
+            this.ListBoxSubProcedures.Location = new System.Drawing.Point(362, 536);
+            this.ListBoxSubProcedures.Name = "ListBoxSubProcedures";
+            this.ListBoxSubProcedures.Size = new System.Drawing.Size(357, 194);
+            this.ListBoxSubProcedures.TabIndex = 39;
+            this.ListBoxSubProcedures.UseCompatibleStateImageBehavior = false;
             // 
             // labelAddSubProcedure
             // 
@@ -177,6 +178,7 @@ namespace Khidmat
             this.AddButton.TabIndex = 40;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // label2
             // 
@@ -214,7 +216,7 @@ namespace Khidmat
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.TextboxAddSubProcedure);
             this.Controls.Add(this.labelAddSubProcedure);
-            this.Controls.Add(this.ListViewSubProcedures);
+            this.Controls.Add(this.ListBoxSubProcedures);
             this.Controls.Add(this.WelcomeText);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.SubmitButton);
@@ -238,7 +240,7 @@ namespace Khidmat
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.Label WelcomeText;
-        private System.Windows.Forms.ListView ListViewSubProcedures;
+        private System.Windows.Forms.ListView ListBoxSubProcedures;
         private System.Windows.Forms.Label labelAddSubProcedure;
         private System.Windows.Forms.TextBox TextboxAddSubProcedure;
         private System.Windows.Forms.Button AddButton;
