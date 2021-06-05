@@ -15,6 +15,7 @@ namespace Khidmat
         //AdminPanel adminPanelRef;
         public string gendervariable;
         DbConnection db = new DbConnection();
+        private int index;
         public AddNewUser()//AdminPanel panel)
         {
             InitializeComponent();
@@ -48,6 +49,7 @@ namespace Khidmat
                 if (GenderListBox.GetItemChecked(ix))
                 {
                     gendervariable = GenderListBox.Items[ix].ToString();
+                    index = ix;
 
                 }
             }

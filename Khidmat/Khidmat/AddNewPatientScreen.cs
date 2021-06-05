@@ -50,7 +50,7 @@ namespace Khidmat
         private void SubmitButton_Click_1(object sender, EventArgs e)
         {
 
-            string q = "INSERT INTO patientInfo (patientMR, patientName, sex, age, history, contact, occupation, address) VALUES ('" + HospitalRegTextbox.Text.ToString() + "','" + NameTextBox.Text.ToString() + "','" + gendervariable.ToString() + "'," + Convert.ToInt32(AgeTextBox.Text.ToString()) + ",'" + "history" + "','" + ContactTextBox.Text.ToString() + "','" + OccupationTextbox.Text.ToString() + "','" + richTextBox1.Text.ToString() + "');";
+            string q = "INSERT INTO patientInfo (patientMR, patientName, sex, age, history, contact, occupation, address) VALUES ('" + HospitalRegTextbox.Text.ToString() + "','" + NameTextBox.Text.ToString() + "','" + gendervariable.ToString() + "'," + Convert.ToInt32(AgeTextBox.Text.ToString()) + ",'" + "history" + "','" + ContactTextBox.Text.ToString() + "','" + OccupationTextbox.Text.ToString() + "','" + AddressTextbox.Text.ToString() + "');";
             MessageBox.Show(q);
             db.Inserts(q);
             
@@ -67,10 +67,15 @@ namespace Khidmat
                 if (GenderListBox.GetItemChecked(ix))
                 {
                     gendervariable = GenderListBox.Items[ix].ToString();
-
+                }
+                else
+                {
+                    GenderListBox.SetItemCheckState(ix, CheckState.Unchecked);
                 }
             }
 
         }
+
+
     }
 }
