@@ -33,7 +33,7 @@ namespace Khidmat
 
         private void AddPatientButton_Click(object sender, EventArgs e)
         {
-            AddNewRecord addNewRecordScreen = new AddNewRecord(this);
+            AddNewRecord addNewRecordScreen = new AddNewRecord();//this);
             addNewRecordScreen.Show();
             this.Hide();
         }

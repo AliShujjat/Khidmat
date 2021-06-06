@@ -158,7 +158,9 @@
             this.DODPicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.DODPicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.DODPicker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
+            this.DODPicker.CustomFormat = "yyyy-dd-MM";
             this.DODPicker.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DODPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DODPicker.Location = new System.Drawing.Point(460, 501);
             this.DODPicker.Margin = new System.Windows.Forms.Padding(5);
             this.DODPicker.Name = "DODPicker";
@@ -171,7 +173,9 @@
             this.DOAPicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.DOAPicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.DOAPicker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
+            this.DOAPicker.CustomFormat = "yyyy-dd-MM";
             this.DOAPicker.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DOAPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DOAPicker.Location = new System.Drawing.Point(465, 421);
             this.DOAPicker.Margin = new System.Windows.Forms.Padding(5);
             this.DOAPicker.Name = "DOAPicker";
@@ -225,10 +229,12 @@
             this.ProcedureComboBox.Name = "ProcedureComboBox";
             this.ProcedureComboBox.Size = new System.Drawing.Size(322, 37);
             this.ProcedureComboBox.TabIndex = 28;
+            this.ProcedureComboBox.SelectedIndexChanged += new System.EventHandler(this.ProcedureComboBox_SelectedIndexChanged);
             // 
             // SubProcedureCheckBox
             // 
             this.SubProcedureCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
+            this.SubProcedureCheckBox.CheckOnClick = true;
             this.SubProcedureCheckBox.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.SubProcedureCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
             this.SubProcedureCheckBox.FormattingEnabled = true;
@@ -287,6 +293,7 @@
             this.SubmitButton.Size = new System.Drawing.Size(255, 123);
             this.SubmitButton.TabIndex = 34;
             this.SubmitButton.UseVisualStyleBackColor = true;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // CancelButton
             // 
@@ -499,18 +506,6 @@
             this.DoctorComboBox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.DoctorComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
             this.DoctorComboBox.FormattingEnabled = true;
-            this.DoctorComboBox.Items.AddRange(new object[] {
-            "Admitted to inpatient facility",
-            "Treated and called for follow-up",
-            "Referred to other speciality unit",
-            "Death of patient",
-            "Improved",
-            "Discharged",
-            "Treated",
-            "Under Treatment",
-            "Treatment Failure",
-            "Follow Up",
-            "Other"});
             this.DoctorComboBox.Location = new System.Drawing.Point(346, 1232);
             this.DoctorComboBox.Margin = new System.Windows.Forms.Padding(5);
             this.DoctorComboBox.Name = "DoctorComboBox";
