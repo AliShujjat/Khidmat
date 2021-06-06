@@ -121,10 +121,10 @@ namespace Khidmat
             this.Controls.Add(NewSearch.searchByTextbox);
 
 
-            NewSearch.filterByText.Location = new Point(NewSearch.filterByText.Location.X, NewSearch.filterByText.Location.Y +  100);
-            NewSearch.filterDropDown.Location = new Point(NewSearch.filterDropDown.Location.X, NewSearch.filterDropDown.Location.Y + 100); ;
-            NewSearch.searchByText.Location = new Point(NewSearch.searchByText.Location.X, NewSearch.searchByText.Location.Y + 100); ;
-            NewSearch.searchByTextbox.Location = new Point(NewSearch.searchByTextbox.Location.X, NewSearch.searchByTextbox.Location.Y +  100);
+            NewSearch.filterByText.Location = new Point(NewSearch.filterByText.Location.X, NewSearch.filterByText.Location.Y +  200);
+            NewSearch.filterDropDown.Location = new Point(NewSearch.filterDropDown.Location.X, NewSearch.filterDropDown.Location.Y + 200); ;
+            NewSearch.searchByText.Location = new Point(NewSearch.searchByText.Location.X, NewSearch.searchByText.Location.Y + 200); ;
+            NewSearch.searchByTextbox.Location = new Point(NewSearch.searchByTextbox.Location.X, NewSearch.searchByTextbox.Location.Y +  200);
 
             FilterOptions.Add(NewSearch);
         }

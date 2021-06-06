@@ -52,9 +52,32 @@ namespace Khidmat
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            //string q = "INSERT INTO operativeProcedurePatient (patientMR, procedureID, diagnosisID, doctorID ,doctorComments, assistant, anaesthetist, anesthesiaType, dateOfAdmission, dateOfDischarge, wardNumber, roomNumber, bedNumber, outcome, formtype, subprocedure) VALUES ('" + HospitalRegTextbox.Text.ToString() + "','" + gendervariable.ToString() + "','" + SpecializationTextBox.Text.ToString() + "','" + ContactTextBox.Text.ToString() + "','" + DOBPicker.Text.ToString() + "');";
-            //MessageBox.Show(q);
-            //db.Inserts(q);
+
+            string dq = "INSERT INTO diagnosis (diagnosisName, description) VALUES ('" + DiagnosisTextBox.Text.ToString() + "','" + DiagnosisDescriptionTextBox.Text.ToString() + "');";
+            db.Inserts(dq);
+
+            dt = db.Select("select procedureID from operativeProcedure where operationName = '" + ProcedureComboBox.SelectedItem.ToString() + "';");
+            int procedureIDint = Convert.ToInt32(dt.Rows[0][0].ToString());
+
+            dt = db.Select("select MAX(diagnosisID) from diagnosis where diagnosisName = '" + DiagnosisTextBox.Text.ToString() + "';");
+            int diagnosisIDint = Convert.ToInt32(dt.Rows[0][0].ToString());
+
+            dt = db.Select("select doctorID from doctor where doctorName = '" + DoctorComboBox.SelectedItem.ToString() + "';");
+            int doctorIDint = Convert.ToInt32(dt.Rows[0][0].ToString());
+
+            string subprocedurelist = "";
+            for (int i = 0; i < SubProcedureCheckBox.Items.Count; i++)
+            {
+                if (SubProcedureCheckBox.GetItemChecked(i))
+                {
+                    subprocedurelist += (string)SubProcedureCheckBox.Items[i];
+                    subprocedurelist += ", ";
+                }
+            }
+
+            string q = "INSERT INTO operativeProcedurePatient (patientMR, procedureID, diagnosisID, doctorID ,doctorComments, assistant, anaesthetist, anesthesiaType, dateOfAdmission, dateOfDischarge, wardNumber, roomNumber, bedNumber, outcome, formtype, subprocedure) VALUES ('" + HospitalRegTextbox.Text.ToString() + "'," + procedureIDint.ToString() + "," + diagnosisIDint.ToString() + "," + doctorIDint.ToString() + ",'" + DoctorCommentsTextBox.Text.ToString() + "','" + AssistantTextBox.Text.ToString() + "','" + AnaesthetistTextBox.Text.ToString() + "','" + AnaesthesiaTypeTextBox.Text.ToString() + "','" + DOAPicker.Text.ToString() + "','" + DODPicker.Text.ToString() + "','" + WardTextbox.Text.ToString() + "','" + RoomNumberTextbox.Text.ToString() + "','" + BedNumberTextbox.Text.ToString() + "','" + OutcomeComboBox.SelectedItem.ToString() + "','" + FormTypeComboBox.SelectedItem.ToString() + "','" + subprocedurelist.ToString() + "');";
+            MessageBox.Show(q);
+            db.Inserts(q);
 
         }
 

@@ -51,9 +51,10 @@ namespace Khidmat
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.label1.Location = new System.Drawing.Point(212, 43);
+            this.label1.Location = new System.Drawing.Point(344, 69);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(298, 36);
+            this.label1.Size = new System.Drawing.Size(477, 59);
             this.label1.TabIndex = 0;
             this.label1.Text = "Search Database";
             // 
@@ -62,9 +63,10 @@ namespace Khidmat
             this.SearchResultsText.AutoSize = true;
             this.SearchResultsText.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.SearchResultsText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.SearchResultsText.Location = new System.Drawing.Point(104, 259);
+            this.SearchResultsText.Location = new System.Drawing.Point(169, 414);
+            this.SearchResultsText.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.SearchResultsText.Name = "SearchResultsText";
-            this.SearchResultsText.Size = new System.Drawing.Size(136, 18);
+            this.SearchResultsText.Size = new System.Drawing.Size(222, 29);
             this.SearchResultsText.TabIndex = 2;
             this.SearchResultsText.Text = "Search Results:";
             // 
@@ -72,14 +74,13 @@ namespace Khidmat
             // 
             this.FilterDropDown.FormattingEnabled = true;
             this.FilterDropDown.Items.AddRange(new object[] {
-            "Name",
             "Age",
-            "Sex",
             "Date of Procedure",
             "Diagnosis"});
-            this.FilterDropDown.Location = new System.Drawing.Point(286, 110);
+            this.FilterDropDown.Location = new System.Drawing.Point(465, 176);
+            this.FilterDropDown.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.FilterDropDown.Name = "FilterDropDown";
-            this.FilterDropDown.Size = new System.Drawing.Size(249, 28);
+            this.FilterDropDown.Size = new System.Drawing.Size(402, 40);
             this.FilterDropDown.TabIndex = 3;
             // 
             // FilterByText
@@ -87,18 +88,20 @@ namespace Khidmat
             this.FilterByText.AutoSize = true;
             this.FilterByText.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.FilterByText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.FilterByText.Location = new System.Drawing.Point(175, 106);
+            this.FilterByText.Location = new System.Drawing.Point(284, 170);
+            this.FilterByText.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.FilterByText.Name = "FilterByText";
-            this.FilterByText.Size = new System.Drawing.Size(82, 18);
+            this.FilterByText.Size = new System.Drawing.Size(136, 29);
             this.FilterByText.TabIndex = 4;
             this.FilterByText.Text = "Filter By:";
             // 
             // SearchResultsList
             // 
             this.SearchResultsList.HideSelection = false;
-            this.SearchResultsList.Location = new System.Drawing.Point(104, 290);
+            this.SearchResultsList.Location = new System.Drawing.Point(169, 464);
+            this.SearchResultsList.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.SearchResultsList.Name = "SearchResultsList";
-            this.SearchResultsList.Size = new System.Drawing.Size(543, 248);
+            this.SearchResultsList.Size = new System.Drawing.Size(880, 394);
             this.SearchResultsList.TabIndex = 1;
             this.SearchResultsList.UseCompatibleStateImageBehavior = false;
             // 
@@ -107,17 +110,19 @@ namespace Khidmat
             this.SearchByText.AutoSize = true;
             this.SearchByText.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.SearchByText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.SearchByText.Location = new System.Drawing.Point(160, 161);
+            this.SearchByText.Location = new System.Drawing.Point(260, 258);
+            this.SearchByText.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.SearchByText.Name = "SearchByText";
-            this.SearchByText.Size = new System.Drawing.Size(96, 18);
+            this.SearchByText.Size = new System.Drawing.Size(157, 29);
             this.SearchByText.TabIndex = 11;
             this.SearchByText.Text = "Search By:";
             // 
             // SearchByTextbox
             // 
-            this.SearchByTextbox.Location = new System.Drawing.Point(286, 164);
+            this.SearchByTextbox.Location = new System.Drawing.Point(465, 262);
+            this.SearchByTextbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.SearchByTextbox.Name = "SearchByTextbox";
-            this.SearchByTextbox.Size = new System.Drawing.Size(249, 27);
+            this.SearchByTextbox.Size = new System.Drawing.Size(402, 39);
             this.SearchByTextbox.TabIndex = 12;
             // 
             // ClearButton
@@ -127,9 +132,10 @@ namespace Khidmat
             this.ClearButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ClearButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.ClearButton.Location = new System.Drawing.Point(240, 211);
+            this.ClearButton.Location = new System.Drawing.Point(390, 338);
+            this.ClearButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.ClearButton.Name = "ClearButton";
-            this.ClearButton.Size = new System.Drawing.Size(117, 55);
+            this.ClearButton.Size = new System.Drawing.Size(190, 88);
             this.ClearButton.TabIndex = 39;
             this.ClearButton.UseVisualStyleBackColor = true;
             this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click_1);
@@ -141,9 +147,10 @@ namespace Khidmat
             this.SubmitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.SubmitButton.Location = new System.Drawing.Point(400, 211);
+            this.SubmitButton.Location = new System.Drawing.Point(650, 338);
+            this.SubmitButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(122, 57);
+            this.SubmitButton.Size = new System.Drawing.Size(198, 91);
             this.SubmitButton.TabIndex = 38;
             this.SubmitButton.UseVisualStyleBackColor = true;
             // 
@@ -154,9 +161,10 @@ namespace Khidmat
             this.DeleteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.DeleteButton.Location = new System.Drawing.Point(175, 552);
+            this.DeleteButton.Location = new System.Drawing.Point(284, 883);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(106, 64);
+            this.DeleteButton.Size = new System.Drawing.Size(172, 102);
             this.DeleteButton.TabIndex = 40;
             this.DeleteButton.UseVisualStyleBackColor = true;
             // 
@@ -167,9 +175,10 @@ namespace Khidmat
             this.EditButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.EditButton.Location = new System.Drawing.Point(329, 552);
+            this.EditButton.Location = new System.Drawing.Point(507, 883);
+            this.EditButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(123, 64);
+            this.EditButton.Size = new System.Drawing.Size(200, 102);
             this.EditButton.TabIndex = 41;
             this.EditButton.UseVisualStyleBackColor = true;
             // 
@@ -180,9 +189,10 @@ namespace Khidmat
             this.ViewButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ViewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ViewButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.ViewButton.Location = new System.Drawing.Point(479, 552);
+            this.ViewButton.Location = new System.Drawing.Point(778, 883);
+            this.ViewButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.ViewButton.Name = "ViewButton";
-            this.ViewButton.Size = new System.Drawing.Size(106, 59);
+            this.ViewButton.Size = new System.Drawing.Size(172, 94);
             this.ViewButton.TabIndex = 42;
             this.ViewButton.UseVisualStyleBackColor = true;
             // 
@@ -193,9 +203,10 @@ namespace Khidmat
             this.BackButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.BackButton.Location = new System.Drawing.Point(24, 24);
+            this.BackButton.Location = new System.Drawing.Point(39, 38);
+            this.BackButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(66, 55);
+            this.BackButton.Size = new System.Drawing.Size(107, 88);
             this.BackButton.TabIndex = 43;
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click_1);
@@ -207,20 +218,21 @@ namespace Khidmat
             this.AddButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.AddButton.Location = new System.Drawing.Point(558, 157);
+            this.AddButton.Location = new System.Drawing.Point(907, 251);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(46, 41);
+            this.AddButton.Size = new System.Drawing.Size(75, 66);
             this.AddButton.TabIndex = 44;
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click_1);
             // 
             // SearchScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(718, 623);
+            this.ClientSize = new System.Drawing.Size(1167, 997);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.ViewButton);
@@ -235,6 +247,7 @@ namespace Khidmat
             this.Controls.Add(this.SearchResultsText);
             this.Controls.Add(this.SearchResultsList);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "SearchScreen";
             this.Text = "SearchScreen";
             this.ResumeLayout(false);

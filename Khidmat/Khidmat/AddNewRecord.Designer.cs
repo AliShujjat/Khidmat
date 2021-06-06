@@ -35,7 +35,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.WardTextbox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.DescriptionTextBox = new System.Windows.Forms.RichTextBox();
+            this.DoctorCommentsTextBox = new System.Windows.Forms.RichTextBox();
             this.DODPicker = new System.Windows.Forms.DateTimePicker();
             this.DOAPicker = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
@@ -56,7 +56,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.DiagnosisTextBox = new System.Windows.Forms.RichTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.OutcomeComboBox = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -69,7 +68,9 @@
             this.AnaesthetistTextBox = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.ImageButton = new System.Windows.Forms.Button();
+            this.DiagnosisTextBox = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.DiagnosisDescriptionTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -141,16 +142,17 @@
             this.label9.TabIndex = 14;
             this.label9.Text = "Ward No.";
             // 
-            // DescriptionTextBox
+            // DoctorCommentsTextBox
             // 
-            this.DescriptionTextBox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DescriptionTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.DescriptionTextBox.Location = new System.Drawing.Point(973, 403);
-            this.DescriptionTextBox.Margin = new System.Windows.Forms.Padding(5);
-            this.DescriptionTextBox.Name = "DescriptionTextBox";
-            this.DescriptionTextBox.Size = new System.Drawing.Size(292, 164);
-            this.DescriptionTextBox.TabIndex = 20;
-            this.DescriptionTextBox.Text = "";
+            this.DoctorCommentsTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
+            this.DoctorCommentsTextBox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DoctorCommentsTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
+            this.DoctorCommentsTextBox.Location = new System.Drawing.Point(973, 403);
+            this.DoctorCommentsTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.DoctorCommentsTextBox.Name = "DoctorCommentsTextBox";
+            this.DoctorCommentsTextBox.Size = new System.Drawing.Size(292, 164);
+            this.DoctorCommentsTextBox.TabIndex = 20;
+            this.DoctorCommentsTextBox.Text = "";
             // 
             // DODPicker
             // 
@@ -211,7 +213,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.label1.Location = new System.Drawing.Point(195, 878);
+            this.label1.Location = new System.Drawing.Point(163, 878);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(161, 29);
@@ -387,7 +389,7 @@
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(132, 806);
+            this.pictureBox2.Location = new System.Drawing.Point(132, 767);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(1214, 752);
@@ -404,28 +406,17 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(240, 66);
             this.label8.TabIndex = 43;
-            this.label8.Text = "Brief Description:";
-            // 
-            // DiagnosisTextBox
-            // 
-            this.DiagnosisTextBox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DiagnosisTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.DiagnosisTextBox.Location = new System.Drawing.Point(353, 941);
-            this.DiagnosisTextBox.Margin = new System.Windows.Forms.Padding(5);
-            this.DiagnosisTextBox.Name = "DiagnosisTextBox";
-            this.DiagnosisTextBox.Size = new System.Drawing.Size(322, 182);
-            this.DiagnosisTextBox.TabIndex = 44;
-            this.DiagnosisTextBox.Text = "";
+            this.label8.Text = "Doctor Comments:";
             // 
             // label13
             // 
             this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label13.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.label13.Location = new System.Drawing.Point(195, 987);
+            this.label13.Location = new System.Drawing.Point(163, 950);
             this.label13.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(240, 66);
+            this.label13.Size = new System.Drawing.Size(154, 66);
             this.label13.TabIndex = 45;
             this.label13.Text = "Diagnosis:";
             // 
@@ -447,7 +438,7 @@
             "Treatment Failure",
             "Follow Up",
             "Other"});
-            this.OutcomeComboBox.Location = new System.Drawing.Point(346, 1160);
+            this.OutcomeComboBox.Location = new System.Drawing.Point(345, 1276);
             this.OutcomeComboBox.Margin = new System.Windows.Forms.Padding(5);
             this.OutcomeComboBox.Name = "OutcomeComboBox";
             this.OutcomeComboBox.Size = new System.Drawing.Size(337, 37);
@@ -458,7 +449,7 @@
             // 
             this.label14.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.label14.Location = new System.Drawing.Point(195, 1157);
+            this.label14.Location = new System.Drawing.Point(194, 1273);
             this.label14.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(200, 45);
@@ -470,7 +461,7 @@
             this.AssistantTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.AssistantTextBox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AssistantTextBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.AssistantTextBox.Location = new System.Drawing.Point(346, 1309);
+            this.AssistantTextBox.Location = new System.Drawing.Point(345, 1425);
             this.AssistantTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.AssistantTextBox.Name = "AssistantTextBox";
             this.AssistantTextBox.Size = new System.Drawing.Size(337, 37);
@@ -481,7 +472,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.label15.Location = new System.Drawing.Point(219, 1232);
+            this.label15.Location = new System.Drawing.Point(218, 1348);
             this.label15.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(112, 29);
@@ -493,7 +484,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.label16.Location = new System.Drawing.Point(182, 1309);
+            this.label16.Location = new System.Drawing.Point(181, 1425);
             this.label16.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(147, 29);
@@ -506,7 +497,7 @@
             this.DoctorComboBox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.DoctorComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
             this.DoctorComboBox.FormattingEnabled = true;
-            this.DoctorComboBox.Location = new System.Drawing.Point(346, 1232);
+            this.DoctorComboBox.Location = new System.Drawing.Point(345, 1348);
             this.DoctorComboBox.Margin = new System.Windows.Forms.Padding(5);
             this.DoctorComboBox.Name = "DoctorComboBox";
             this.DoctorComboBox.Size = new System.Drawing.Size(337, 37);
@@ -517,7 +508,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.label17.Location = new System.Drawing.Point(733, 1232);
+            this.label17.Location = new System.Drawing.Point(732, 1348);
             this.label17.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(201, 29);
@@ -529,7 +520,7 @@
             this.AnaesthesiaTypeTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.AnaesthesiaTypeTextBox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AnaesthesiaTypeTextBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.AnaesthesiaTypeTextBox.Location = new System.Drawing.Point(928, 1306);
+            this.AnaesthesiaTypeTextBox.Location = new System.Drawing.Point(927, 1422);
             this.AnaesthesiaTypeTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.AnaesthesiaTypeTextBox.Name = "AnaesthesiaTypeTextBox";
             this.AnaesthesiaTypeTextBox.Size = new System.Drawing.Size(337, 37);
@@ -540,7 +531,7 @@
             this.AnaesthetistTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.AnaesthetistTextBox.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AnaesthetistTextBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.AnaesthetistTextBox.Location = new System.Drawing.Point(928, 1232);
+            this.AnaesthetistTextBox.Location = new System.Drawing.Point(927, 1348);
             this.AnaesthetistTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.AnaesthetistTextBox.Name = "AnaesthetistTextBox";
             this.AnaesthetistTextBox.Size = new System.Drawing.Size(337, 37);
@@ -561,26 +552,41 @@
             // 
             this.label18.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.label18.Location = new System.Drawing.Point(733, 1282);
+            this.label18.Location = new System.Drawing.Point(732, 1398);
             this.label18.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(221, 66);
             this.label18.TabIndex = 57;
             this.label18.Text = "Anaesthesia Type:";
             // 
-            // ImageButton
+            // DiagnosisTextBox
             // 
-            this.ImageButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ImageButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ImageButton.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ImageButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
-            this.ImageButton.Location = new System.Drawing.Point(606, 1406);
-            this.ImageButton.Margin = new System.Windows.Forms.Padding(5);
-            this.ImageButton.Name = "ImageButton";
-            this.ImageButton.Size = new System.Drawing.Size(234, 99);
-            this.ImageButton.TabIndex = 58;
-            this.ImageButton.Text = "Upload Images";
-            this.ImageButton.UseVisualStyleBackColor = true;
+            this.DiagnosisTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
+            this.DiagnosisTextBox.Location = new System.Drawing.Point(353, 950);
+            this.DiagnosisTextBox.Name = "DiagnosisTextBox";
+            this.DiagnosisTextBox.Size = new System.Drawing.Size(322, 39);
+            this.DiagnosisTextBox.TabIndex = 60;
+            // 
+            // label20
+            // 
+            this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label20.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(158)))), ((int)(((byte)(176)))));
+            this.label20.Location = new System.Drawing.Point(163, 1033);
+            this.label20.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(193, 66);
+            this.label20.TabIndex = 45;
+            this.label20.Text = "Diagnosis Description:";
+            // 
+            // DiagnosisDescriptionTextBox
+            // 
+            this.DiagnosisDescriptionTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
+            this.DiagnosisDescriptionTextBox.Location = new System.Drawing.Point(353, 1033);
+            this.DiagnosisDescriptionTextBox.Multiline = true;
+            this.DiagnosisDescriptionTextBox.Name = "DiagnosisDescriptionTextBox";
+            this.DiagnosisDescriptionTextBox.Size = new System.Drawing.Size(485, 189);
+            this.DiagnosisDescriptionTextBox.TabIndex = 61;
             // 
             // AddNewRecord
             // 
@@ -591,7 +597,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1493, 1555);
-            this.Controls.Add(this.ImageButton);
+            this.Controls.Add(this.DiagnosisDescriptionTextBox);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.DiagnosisTextBox);
             this.Controls.Add(this.AnaesthesiaTypeTextBox);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label19);
@@ -603,7 +611,6 @@
             this.Controls.Add(this.label15);
             this.Controls.Add(this.OutcomeComboBox);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.DiagnosisTextBox);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -619,7 +626,7 @@
             this.Controls.Add(this.WelcomeText);
             this.Controls.Add(this.WardTextbox);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.DescriptionTextBox);
+            this.Controls.Add(this.DoctorCommentsTextBox);
             this.Controls.Add(this.HospitalRegTextbox);
             this.Controls.Add(this.DODPicker);
             this.Controls.Add(this.label10);
@@ -651,7 +658,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox WardTextbox;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RichTextBox DescriptionTextBox;
+        private System.Windows.Forms.RichTextBox DoctorCommentsTextBox;
         private System.Windows.Forms.DateTimePicker DODPicker;
         private System.Windows.Forms.DateTimePicker DOAPicker;
         private System.Windows.Forms.Label label7;
@@ -672,7 +679,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RichTextBox DiagnosisTextBox;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox OutcomeComboBox;
         private System.Windows.Forms.Label label14;
@@ -685,6 +691,8 @@
         private System.Windows.Forms.TextBox AnaesthetistTextBox;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Button ImageButton;
+        private System.Windows.Forms.TextBox DiagnosisTextBox;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox DiagnosisDescriptionTextBox;
     }
 }
