@@ -26,7 +26,7 @@ namespace Khidmat
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
-            SearchScreen searchScreen = new SearchScreen(this);
+            SearchScreen searchScreen = new SearchScreen();// this);
             searchScreen.Show();
             this.Hide();
         }

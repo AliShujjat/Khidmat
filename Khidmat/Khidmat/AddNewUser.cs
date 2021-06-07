@@ -36,9 +36,8 @@ namespace Khidmat
         {
             
             string q = "INSERT INTO doctor (doctorName, sex, specialization, contact, dateofbirth) VALUES ('" + NameTextBox.Text.ToString() + "','" + gendervariable.ToString() + "','" + SpecializationTextBox.Text.ToString() + "','"  + ContactTextBox.Text.ToString() + "','" + DOBPicker.Text.ToString() + "');";
-            MessageBox.Show(q);
             db.Inserts(q);
-            this.Close();
+            MessageBox.Show("User Added Successfully!");
             //adminPanelRef.Show();
         }
 

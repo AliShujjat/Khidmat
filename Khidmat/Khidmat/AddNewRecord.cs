@@ -14,6 +14,7 @@ namespace Khidmat
     {
         DbConnection db = new DbConnection();
         DataTable dt = new DataTable();
+        bool check = false;
 
         private MainScreen mainscreenRef;
         public AddNewRecord()//MainScreen main)
@@ -22,6 +23,46 @@ namespace Khidmat
             //mainscreenRef = main;
             db.FillComboBox(ProcedureComboBox, "select operationName from operativeProcedure where parentProcedure is NULL;");
             db.FillComboBox(DoctorComboBox, "select doctorName from doctor;");
+        }
+
+        public AddNewRecord(bool editable, string formtype, string MR, string DOA, string DOD, string comments, string ward, string room, string bed, string procedure, string subprocesdure, string diagnosis, string diagnosisdiscription, string outcome, string doctor, string anesthetist, string atype, string assistant)//MainScreen main)
+        {
+            InitializeComponent();
+            //mainscreenRef = main;
+            
+            FormTypeComboBox.Enabled = false;
+            HospitalRegTextbox.Enabled = false;
+            DOAPicker.Enabled = false;
+            DODPicker.Enabled = false;
+            DoctorCommentsTextBox.Enabled = false;
+            WardTextbox.Enabled = false;
+            RoomNumberTextbox.Enabled = false;
+            BedNumberTextbox.Enabled = false;
+            ProcedureComboBox.Enabled = false;
+            DiagnosisTextBox.Enabled = false;
+            DiagnosisDescriptionTextBox.Enabled = false;
+            DoctorComboBox.Enabled = false;
+            OutcomeComboBox.Enabled = false;
+            AnaesthetistTextBox.Enabled = false;
+            AnaesthesiaTypeTextBox.Enabled = false;
+            AssistantTextBox.Enabled = false;
+
+            FormTypeComboBox.Text = formtype;
+            HospitalRegTextbox.Text = MR;
+            DOAPicker.Text = DOA;
+            DODPicker.Text = DOD;
+            DoctorCommentsTextBox.Text = comments;
+            WardTextbox.Text = ward;
+            RoomNumberTextbox.Text = room;
+            BedNumberTextbox.Text = bed;
+            ProcedureComboBox.Text = procedure;
+            DiagnosisTextBox.Text = diagnosis;
+            DiagnosisDescriptionTextBox.Text = diagnosisdiscription;
+            DoctorComboBox.Text = doctor;
+            OutcomeComboBox.Text = outcome;
+            AnaesthetistTextBox.Text = anesthetist;
+            AnaesthesiaTypeTextBox.Text = atype;
+            AssistantTextBox.Text = assistant;
         }
 
         private void AddNewRecord_Load(object sender, EventArgs e)
