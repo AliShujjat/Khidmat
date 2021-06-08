@@ -17,6 +17,8 @@ namespace Khidmat
         public static int oppID;
         DbConnection db = new DbConnection();
         DataTable dt = new DataTable();
+        DataTable dt2 = new DataTable();
+
 
         public MainScreen mainscreenReference;
 
@@ -89,13 +91,29 @@ namespace Khidmat
 
         private void ViewButton_Click(object sender, EventArgs e)
         {
-            //string qv = "select top 1 * from operativeProcedurePatient where operativeProcedurePatient.procedureID in (select procedureID from operativeProcedure where operationName = '" + dataGridView1.CurrentRow.Cells[2].Value.ToString() + "') and operativeProcedurePatient.diagnosisID in (select diagnosisID from diagnosis where diagnosisName = '" + dataGridView1.CurrentRow.Cells[1].Value.ToString() + "') and operativeProcedurePatient.doctorID in (select doctorID from doctor where doctorName = '" + dataGridView1.CurrentRow.Cells[4].Value.ToString() + "') and operativeProcedurePatient.patientMR in (select patientMR from patientInfo where patientName = '" + dataGridView1.CurrentRow.Cells[0].Value.ToString() + "') and operativeProcedurePatient.subprocedure = '" + dataGridView1.CurrentRow.Cells[3].Value.ToString() + "'";
-            //dt = db.Select(qv);
-            //oppID = Convert.ToInt32(dt.Rows[0][0].ToString());
-            
-            
-            AddNewRecord recordform = new AddNewRecord(false,"formtype", "MR", "1999-04-04", "1999-05-05","comments", "ward","room", "bed", "procedure", "subprocedure", "diagnosis", "diagnosisdescription", "outcome", "doctor", "anaethetist", "atype", "assistant" );
+            string qv = "select top 1 * from operativeProcedurePatient where operativeProcedurePatient.procedureID in (select procedureID from operativeProcedure where operationName = '" + dataGridView1.CurrentRow.Cells[2].Value.ToString() + "') and operativeProcedurePatient.diagnosisID in (select diagnosisID from diagnosis where diagnosisName = '" + dataGridView1.CurrentRow.Cells[1].Value.ToString() + "') and operativeProcedurePatient.doctorID in (select doctorID from doctor where doctorName = '" + dataGridView1.CurrentRow.Cells[4].Value.ToString() + "') and operativeProcedurePatient.patientMR in (select patientMR from patientInfo where patientName = '" + dataGridView1.CurrentRow.Cells[0].Value.ToString() + "') and operativeProcedurePatient.subprocedure = '" + dataGridView1.CurrentRow.Cells[3].Value.ToString() + "'";
+            dt = db.Select(qv);
+            oppID = Convert.ToInt32(dt.Rows[0][0].ToString());
+
+            dt2 = db.Select("Select description from diagnosis where diagnosisID =" + dt.Rows[0][3].ToString() + ";");
+            string description = dt2.Rows[0][0].ToString();
+
+            AddNewRecord recordform = new AddNewRecord(false, dt.Rows[0][15].ToString(), dt.Rows[0][1].ToString(), dt.Rows[0][9].ToString(), dt.Rows[0][10].ToString(), dt.Rows[0][5].ToString(), dt.Rows[0][11].ToString(), dt.Rows[0][12].ToString(), dt.Rows[0][13].ToString(), dataGridView1.CurrentRow.Cells[2].Value.ToString(), dt.Rows[0][16].ToString(), dataGridView1.CurrentRow.Cells[1].Value.ToString(), description, dt.Rows[0][14].ToString(), dataGridView1.CurrentRow.Cells[4].Value.ToString(), dt.Rows[0][7].ToString(), dt.Rows[0][8].ToString(), dt.Rows[0][6].ToString());
             recordform.Show();
+        }
+
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            string qv = "select top 1 * from operativeProcedurePatient where operativeProcedurePatient.procedureID in (select procedureID from operativeProcedure where operationName = '" + dataGridView1.CurrentRow.Cells[2].Value.ToString() + "') and operativeProcedurePatient.diagnosisID in (select diagnosisID from diagnosis where diagnosisName = '" + dataGridView1.CurrentRow.Cells[1].Value.ToString() + "') and operativeProcedurePatient.doctorID in (select doctorID from doctor where doctorName = '" + dataGridView1.CurrentRow.Cells[4].Value.ToString() + "') and operativeProcedurePatient.patientMR in (select patientMR from patientInfo where patientName = '" + dataGridView1.CurrentRow.Cells[0].Value.ToString() + "') and operativeProcedurePatient.subprocedure = '" + dataGridView1.CurrentRow.Cells[3].Value.ToString() + "'";
+            dt = db.Select(qv);
+            oppID = Convert.ToInt32(dt.Rows[0][0].ToString());
+
+            dt2 = db.Select("Select description from diagnosis where diagnosisID =" + dt.Rows[0][3].ToString() + ";");
+            string description = dt2.Rows[0][0].ToString();
+
+            AddNewRecord recordform = new AddNewRecord(true, dt.Rows[0][15].ToString(), dt.Rows[0][1].ToString(), dt.Rows[0][9].ToString(), dt.Rows[0][10].ToString(), dt.Rows[0][5].ToString(), dt.Rows[0][11].ToString(), dt.Rows[0][12].ToString(), dt.Rows[0][13].ToString(), dataGridView1.CurrentRow.Cells[2].Value.ToString(), dt.Rows[0][16].ToString(), dataGridView1.CurrentRow.Cells[1].Value.ToString(), description, dt.Rows[0][14].ToString(), dataGridView1.CurrentRow.Cells[4].Value.ToString(), dt.Rows[0][7].ToString(), dt.Rows[0][8].ToString(), dt.Rows[0][6].ToString());
+            recordform.Show();
+
         }
     }
 

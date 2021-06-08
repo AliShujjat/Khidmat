@@ -175,6 +175,7 @@ namespace Khidmat
             this.EditButton.Size = new System.Drawing.Size(200, 102);
             this.EditButton.TabIndex = 41;
             this.EditButton.UseVisualStyleBackColor = true;
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // ViewButton
             // 

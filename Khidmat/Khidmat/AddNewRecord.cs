@@ -29,23 +29,8 @@ namespace Khidmat
         {
             InitializeComponent();
             //mainscreenRef = main;
-            
-            FormTypeComboBox.Enabled = false;
-            HospitalRegTextbox.Enabled = false;
-            DOAPicker.Enabled = false;
-            DODPicker.Enabled = false;
-            DoctorCommentsTextBox.Enabled = false;
-            WardTextbox.Enabled = false;
-            RoomNumberTextbox.Enabled = false;
-            BedNumberTextbox.Enabled = false;
-            ProcedureComboBox.Enabled = false;
-            DiagnosisTextBox.Enabled = false;
-            DiagnosisDescriptionTextBox.Enabled = false;
-            DoctorComboBox.Enabled = false;
-            OutcomeComboBox.Enabled = false;
-            AnaesthetistTextBox.Enabled = false;
-            AnaesthesiaTypeTextBox.Enabled = false;
-            AssistantTextBox.Enabled = false;
+            db.FillComboBox(ProcedureComboBox, "select operationName from operativeProcedure where parentProcedure is NULL;");
+            db.FillComboBox(DoctorComboBox, "select doctorName from doctor;");
 
             FormTypeComboBox.Text = formtype;
             HospitalRegTextbox.Text = MR;
@@ -63,6 +48,28 @@ namespace Khidmat
             AnaesthetistTextBox.Text = anesthetist;
             AnaesthesiaTypeTextBox.Text = atype;
             AssistantTextBox.Text = assistant;
+            
+            this.check = editable;
+
+            if (editable == false)
+            {
+                FormTypeComboBox.Enabled = false;
+                HospitalRegTextbox.Enabled = false;
+                DOAPicker.Enabled = false;
+                DODPicker.Enabled = false;
+                DoctorCommentsTextBox.Enabled = false;
+                WardTextbox.Enabled = false;
+                RoomNumberTextbox.Enabled = false;
+                BedNumberTextbox.Enabled = false;
+                ProcedureComboBox.Enabled = false;
+                DiagnosisTextBox.Enabled = false;
+                DiagnosisDescriptionTextBox.Enabled = false;
+                DoctorComboBox.Enabled = false;
+                OutcomeComboBox.Enabled = false;
+                AnaesthetistTextBox.Enabled = false;
+                AnaesthesiaTypeTextBox.Enabled = false;
+                AssistantTextBox.Enabled = false;
+            }
         }
 
         private void AddNewRecord_Load(object sender, EventArgs e)
@@ -93,7 +100,6 @@ namespace Khidmat
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-
             string dq = "INSERT INTO diagnosis (diagnosisName, description) VALUES ('" + DiagnosisTextBox.Text.ToString() + "','" + DiagnosisDescriptionTextBox.Text.ToString() + "');";
             db.Inserts(dq);
 
@@ -116,12 +122,23 @@ namespace Khidmat
                 }
             }
 
-            string q = "INSERT INTO operativeProcedurePatient (patientMR, procedureID, diagnosisID, doctorID ,doctorComments, assistant, anaesthetist, anesthesiaType, dateOfAdmission, dateOfDischarge, wardNumber, roomNumber, bedNumber, outcome, formtype, subprocedure) VALUES ('" + HospitalRegTextbox.Text.ToString() + "'," + procedureIDint.ToString() + "," + diagnosisIDint.ToString() + "," + doctorIDint.ToString() + ",'" + DoctorCommentsTextBox.Text.ToString() + "','" + AssistantTextBox.Text.ToString() + "','" + AnaesthetistTextBox.Text.ToString() + "','" + AnaesthesiaTypeTextBox.Text.ToString() + "','" + DOAPicker.Text.ToString() + "','" + DODPicker.Text.ToString() + "','" + WardTextbox.Text.ToString() + "','" + RoomNumberTextbox.Text.ToString() + "','" + BedNumberTextbox.Text.ToString() + "','" + OutcomeComboBox.SelectedItem.ToString() + "','" + FormTypeComboBox.SelectedItem.ToString() + "','" + subprocedurelist.ToString() + "');";
-            MessageBox.Show(q);
-            db.Inserts(q);
-
+            if (this.check == false)
+            {
+                string q = "INSERT INTO operativeProcedurePatient (patientMR, procedureID, diagnosisID, doctorID ,doctorComments, assistant, anaesthetist, anesthesiaType, dateOfAdmission, dateOfDischarge, wardNumber, roomNumber, bedNumber, outcome, formtype, subprocedure) VALUES ('" + HospitalRegTextbox.Text.ToString() + "'," + procedureIDint.ToString() + "," + diagnosisIDint.ToString() + "," + doctorIDint.ToString() + ",'" + DoctorCommentsTextBox.Text.ToString() + "','" + AssistantTextBox.Text.ToString() + "','" + AnaesthetistTextBox.Text.ToString() + "','" + AnaesthesiaTypeTextBox.Text.ToString() + "','" + DOAPicker.Text.ToString() + "','" + DODPicker.Text.ToString() + "','" + WardTextbox.Text.ToString() + "','" + RoomNumberTextbox.Text.ToString() + "','" + BedNumberTextbox.Text.ToString() + "','" + OutcomeComboBox.SelectedItem.ToString() + "','" + FormTypeComboBox.SelectedItem.ToString() + "','" + subprocedurelist.ToString() + "');";
+                MessageBox.Show(q);
+                db.Inserts(q);
+            }
+            else
+            {
+                MessageBox.Show(SearchScreen.oppID.ToString());
+                string qu = "UPDATE operativeProcedurePatient SET " +
+                "patientMR = '" + HospitalRegTextbox.Text.ToString() + "', procedureID = " + procedureIDint.ToString() + ", diagnosisID = " + diagnosisIDint.ToString() + ", doctorID = " + doctorIDint.ToString() + ", doctorComments = '" + DoctorCommentsTextBox.Text.ToString() + "', assistant = '" + AssistantTextBox.Text.ToString() + "', anaesthetist = '" + AnaesthetistTextBox.Text.ToString() + "', anesthesiaType = '" + AnaesthesiaTypeTextBox.Text.ToString() + "', dateOfAdmission = '" + DOAPicker.Text.ToString() + "', dateOfDischarge = '" + DODPicker.Text.ToString() + "', wardNumber = '" + WardTextbox.Text.ToString() + "', roomNumber = '" + RoomNumberTextbox.Text.ToString() + "', bedNumber = '" + BedNumberTextbox.Text.ToString() + "', outcome = '" + OutcomeComboBox.SelectedItem.ToString() + "', formtype = '" + FormTypeComboBox.SelectedItem.ToString() + "', subprocedure = '" + subprocedurelist.ToString() + "'" +
+                " WHERE oppID = " + SearchScreen.oppID.ToString() + ";";
+                MessageBox.Show(qu);
+                db.Update(qu);
+            }
         }
-
+         
         private void ProcedureComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SubProcedureCheckBox.Items.Clear();
