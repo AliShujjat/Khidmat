@@ -21,16 +21,16 @@ namespace Khidmat
         {
             InitializeComponent();
             //mainscreenRef = main;
-            db.FillComboBox(ProcedureComboBox, "select operationName from operativeProcedure where parentProcedure is NULL;");
-            db.FillComboBox(DoctorComboBox, "select doctorName from doctor;");
+            //db.FillComboBox(ProcedureComboBox, "select operationName from operativeProcedure where parentProcedure is NULL;");
+           // db.FillComboBox(DoctorComboBox, "select doctorName from doctor;");
         }
 
         public AddNewRecord(bool editable, string formtype, string MR, string DOA, string DOD, string comments, string ward, string room, string bed, string procedure, string subprocesdure, string diagnosis, string diagnosisdiscription, string outcome, string doctor, string anesthetist, string atype, string assistant)//MainScreen main)
         {
             InitializeComponent();
             //mainscreenRef = main;
-            db.FillComboBox(ProcedureComboBox, "select operationName from operativeProcedure where parentProcedure is NULL;");
-            db.FillComboBox(DoctorComboBox, "select doctorName from doctor;");
+            //db.FillComboBox(ProcedureComboBox, "select operationName from operativeProcedure where parentProcedure is NULL;");
+            //db.FillComboBox(DoctorComboBox, "select doctorName from doctor;");
 
             FormTypeComboBox.Text = formtype;
             HospitalRegTextbox.Text = MR;
@@ -156,6 +156,52 @@ namespace Khidmat
                 ((ListBox)SubProcedureCheckBox).ValueMember = drd["operationName"].ToString();
             }
             db.conn.Close();
+        }
+
+
+        void Image_Click(object sender, EventArgs e, string newImage)
+        {
+            var newForm = new ImageViewer();
+
+            newForm.ImageBox.Image = Image.FromFile(newImage) ;
+            newForm.Show();
+        }
+
+
+        private void UploadButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Title = "Please select images";
+            ofd.Multiselect = true;
+            ofd.Filter = "JPG|*.jpg|JPEG|*.jpeg|GIF|*.gif|PNG|*.png";
+            DialogResult dr = ofd.ShowDialog();
+            if (dr == System.Windows.Forms.DialogResult.OK)
+            {
+                int x = 20;
+                int y = 20;
+                string[] files = ofd.FileNames;
+                int maxHeight = -1;
+                foreach (string filename in files)
+                {
+                    PictureBox pic = new PictureBox();
+                    pic.Click += (sender, EventArgs) => { Image_Click(sender, EventArgs, filename); };
+                    pic.Image = Image.FromFile(filename);
+                    pic.Location = new Point(x, y);
+                    pic.SizeMode = PictureBoxSizeMode.StretchImage;
+                    x += pic.Width + 10;
+                    maxHeight = Math.Max(pic.Height, maxHeight);
+                    if (x > this.ClientSize.Width - 100)
+                    {
+                        x = 20;
+                        y += maxHeight + 10;
+                    }
+                    this.ImagePanel.Controls.Add(pic);
+
+
+                }
+
+            }
+
         }
     }
 }
