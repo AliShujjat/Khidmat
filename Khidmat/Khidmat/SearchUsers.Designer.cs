@@ -68,6 +68,7 @@ namespace Khidmat
             this.ViewButton.Size = new System.Drawing.Size(172, 94);
             this.ViewButton.TabIndex = 55;
             this.ViewButton.UseVisualStyleBackColor = true;
+            this.ViewButton.Click += new System.EventHandler(this.ViewButton_Click);
             // 
             // EditButton
             // 
@@ -82,6 +83,7 @@ namespace Khidmat
             this.EditButton.Size = new System.Drawing.Size(200, 102);
             this.EditButton.TabIndex = 54;
             this.EditButton.UseVisualStyleBackColor = true;
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // DeleteButton
             // 
@@ -96,6 +98,7 @@ namespace Khidmat
             this.DeleteButton.Size = new System.Drawing.Size(172, 102);
             this.DeleteButton.TabIndex = 53;
             this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // SearchResultsText
             // 
@@ -128,6 +131,7 @@ namespace Khidmat
             this.dataGridView1.Location = new System.Drawing.Point(177, 249);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(837, 526);
             this.dataGridView1.TabIndex = 57;
             this.dataGridView1.Text = "dataGridView1";

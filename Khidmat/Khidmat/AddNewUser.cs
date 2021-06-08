@@ -16,10 +16,33 @@ namespace Khidmat
         public string gendervariable;
         DbConnection db = new DbConnection();
         private int index;
+        public static bool check = false;
+
         public AddNewUser()//AdminPanel panel)
         {
             InitializeComponent();
             //adminPanelRef = panel;
+        }
+
+        public AddNewUser (bool editable, string Name, string specialization, string Contact, string DOB, string sex)
+        {
+            InitializeComponent();
+            //adminPanelRef = panel;
+            MessageBox.Show(Name);
+            NameTextBox.Text = Name;
+            SpecializationTextBox.Text = specialization;
+            ContactTextBox.Text = Contact;
+            //DOBPicker.Value = Convert.ToDateTime(DOB);
+
+            if (editable == false)
+            {
+                NameTextBox.Enabled = false;
+                SpecializationTextBox.Enabled = false;
+                ContactTextBox.Enabled = false;
+                DOBPicker.Enabled = false;
+                SubmitButton.Enabled = false;
+            }
+
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -34,11 +57,23 @@ namespace Khidmat
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            
-            string q = "INSERT INTO doctor (doctorName, sex, specialization, contact, dateofbirth) VALUES ('" + NameTextBox.Text.ToString() + "','" + gendervariable.ToString() + "','" + SpecializationTextBox.Text.ToString() + "','"  + ContactTextBox.Text.ToString() + "','" + DOBPicker.Text.ToString() + "');";
-            db.Inserts(q);
-            MessageBox.Show("User Added Successfully!");
-            //adminPanelRef.Show();
+            if (check == false)
+            {
+                string q = "INSERT INTO doctor (doctorName, sex, specialization, contact, dateofbirth) VALUES ('" + NameTextBox.Text.ToString() + "','" + gendervariable.ToString() + "','" + SpecializationTextBox.Text.ToString() + "','" + ContactTextBox.Text.ToString() + "','" + DOBPicker.Value.Date + "');";
+                db.Inserts(q);
+                MessageBox.Show("User Added Successfully!");
+                //adminPanelRef.Show();
+            }
+            else
+            {
+                string qu = "UPDATE doctor " +
+                    "SET doctorName = '" + NameTextBox.Text.ToString() + "', specialization = '" + SpecializationTextBox.Text.ToString() + "', contact = '" + ContactTextBox.Text.ToString() + "', dateofbirth = '" + DOBPicker.Value.Date + "', sex = '" + gendervariable + "';" +
+                    "WHERE doctorID = " + SearchUsers.doctorID.ToString();
+                MessageBox.Show(qu);
+                db.Update(qu);
+                MessageBox.Show("Update Successful");
+            }
+
         }
 
         private void GenderListBox_SelectedIndexChanged(object sender, EventArgs e)
