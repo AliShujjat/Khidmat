@@ -6,11 +6,16 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using System.Data.SqlClient;
+using System.Data.Sql;
 
 namespace Khidmat
 {
     public partial class LogIn : Form
     {
+        DbConnection db = new DbConnection();
+        DataTable dt = new DataTable();
+
         public LogIn()
         {
             InitializeComponent();
@@ -23,15 +28,41 @@ namespace Khidmat
 
         private void LogInButton_Click(object sender, EventArgs e)
         {
-            if (IdTextBox.Text == "admin" && PasswordTextbox.Text == "admin")
+            dt = db.Select("Select * from doctor where doctorname like '" + IdTextBox.Text.ToString() + "';");
+            try
             {
-                MainScreen mainscreen = new MainScreen(this);
-                mainscreen.Show();
-                this.Hide();
+                if (dt.Rows.Count == 0)
+                {
+                    MessageBox.Show("User ID not recognized by the system.");
+                    IdTextBox.Text = "";
+                    IdTextBox.Focus();
+                }
+                else
+                {
+                    if (PasswordTextbox.Text == "admin")
+                    {
+                        Program.userType = true;
+                        MainScreen mainscreen = new MainScreen(this);
+                        mainscreen.Show();
+                        this.Hide();
+                    }
+                    else if (PasswordTextbox.Text == "doctor")
+                    {
+                        Program.userType = false;
+                        MainScreen mainscreen = new MainScreen(this);
+                        mainscreen.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Incorrect Password!");
+                    }
+
+                }
             }
-            else
+            catch (Exception exception1)
             {
-                MessageBox.Show("Please enter ID and Password!");
+                MessageBox.Show(exception1.Message);
             }
         }
 

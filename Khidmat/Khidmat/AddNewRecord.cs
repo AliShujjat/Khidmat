@@ -29,8 +29,8 @@ namespace Khidmat
         {
             InitializeComponent();
             //mainscreenRef = main;
-            //db.FillComboBox(ProcedureComboBox, "select operationName from operativeProcedure where parentProcedure is NULL;");
-            //db.FillComboBox(DoctorComboBox, "select doctorName from doctor;");
+            db.FillComboBox(ProcedureComboBox, "select operationName from operativeProcedure where parentProcedure is NULL;");
+            db.FillComboBox(DoctorComboBox, "select doctorName from doctor;");
 
             FormTypeComboBox.Text = formtype;
             HospitalRegTextbox.Text = MR;
@@ -71,6 +71,19 @@ namespace Khidmat
                 AssistantTextBox.Enabled = false;
                 SubmitButton.Enabled = false;
             }
+
+            string[] ListofSubProcedures = subprocesdure.Split(", ");
+            for (int i = 0; i < SubProcedureCheckBox.Items.Count; i++)
+            {
+                foreach (string s in ListofSubProcedures)
+                {
+                    if (s == SubProcedureCheckBox.Items[i].ToString())
+                    {
+                        SubProcedureCheckBox.SetItemChecked(i, true);
+                    }
+                }
+            }
+
         }
 
         private void AddNewRecord_Load(object sender, EventArgs e)
@@ -125,7 +138,7 @@ namespace Khidmat
 
             if (this.check == false)
             {
-                string q = "INSERT INTO operativeProcedurePatient (patientMR, procedureID, diagnosisID, doctorID ,doctorComments, assistant, anaesthetist, anesthesiaType, dateOfAdmission, dateOfDischarge, wardNumber, roomNumber, bedNumber, outcome, formtype, subprocedure) VALUES ('" + HospitalRegTextbox.Text.ToString() + "'," + procedureIDint.ToString() + "," + diagnosisIDint.ToString() + "," + doctorIDint.ToString() + ",'" + DoctorCommentsTextBox.Text.ToString() + "','" + AssistantTextBox.Text.ToString() + "','" + AnaesthetistTextBox.Text.ToString() + "','" + AnaesthesiaTypeTextBox.Text.ToString() + "','" + DOAPicker.Value.Date + "','" + DODPicker.Value.Date + "','" + WardTextbox.Text.ToString() + "','" + RoomNumberTextbox.Text.ToString() + "','" + BedNumberTextbox.Text.ToString() + "','" + OutcomeComboBox.SelectedItem.ToString() + "','" + FormTypeComboBox.SelectedItem.ToString() + "','" + subprocedurelist.ToString() + "');";
+                string q = "INSERT INTO operativeProcedurePatient (patientMR, procedureID, diagnosisID, doctorID ,doctorComments, assistant, anaesthetist, anesthesiaType, dateOfAdmission, dateOfDischarge, wardNumber, roomNumber, bedNumber, outcome, formtype, subprocedure) VALUES ('" + HospitalRegTextbox.Text.ToString() + "'," + procedureIDint.ToString() + "," + diagnosisIDint.ToString() + "," + doctorIDint.ToString() + ",'" + DoctorCommentsTextBox.Text.ToString() + "','" + AssistantTextBox.Text.ToString() + "','" + AnaesthetistTextBox.Text.ToString() + "','" + AnaesthesiaTypeTextBox.Text.ToString() + "','" + DOAPicker.Value.ToShortDateString() + "','" + DODPicker.Value.ToShortDateString() + "','" + WardTextbox.Text.ToString() + "','" + RoomNumberTextbox.Text.ToString() + "','" + BedNumberTextbox.Text.ToString() + "','" + OutcomeComboBox.SelectedItem.ToString() + "','" + FormTypeComboBox.SelectedItem.ToString() + "','" + subprocedurelist.ToString() + "');";
                 MessageBox.Show(q);
                 db.Inserts(q);
             }
@@ -133,7 +146,7 @@ namespace Khidmat
             {
                 MessageBox.Show(SearchScreen.oppID.ToString());
                 string qu = "UPDATE operativeProcedurePatient SET " +
-                "patientMR = '" + HospitalRegTextbox.Text.ToString() + "', procedureID = " + procedureIDint.ToString() + ", diagnosisID = " + diagnosisIDint.ToString() + ", doctorID = " + doctorIDint.ToString() + ", doctorComments = '" + DoctorCommentsTextBox.Text.ToString() + "', assistant = '" + AssistantTextBox.Text.ToString() + "', anaesthetist = '" + AnaesthetistTextBox.Text.ToString() + "', anesthesiaType = '" + AnaesthesiaTypeTextBox.Text.ToString() + "', dateOfAdmission = '" + DOAPicker.Value.Date + "', dateOfDischarge = '" + DODPicker.Value.Date + "', wardNumber = '" + WardTextbox.Text.ToString() + "', roomNumber = '" + RoomNumberTextbox.Text.ToString() + "', bedNumber = '" + BedNumberTextbox.Text.ToString() + "', outcome = '" + OutcomeComboBox.SelectedItem.ToString() + "', formtype = '" + FormTypeComboBox.SelectedItem.ToString() + "', subprocedure = '" + subprocedurelist.ToString() + "'" +
+                "patientMR = '" + HospitalRegTextbox.Text.ToString() + "', procedureID = " + procedureIDint.ToString() + ", diagnosisID = " + diagnosisIDint.ToString() + ", doctorID = " + doctorIDint.ToString() + ", doctorComments = '" + DoctorCommentsTextBox.Text.ToString() + "', assistant = '" + AssistantTextBox.Text.ToString() + "', anaesthetist = '" + AnaesthetistTextBox.Text.ToString() + "', anesthesiaType = '" + AnaesthesiaTypeTextBox.Text.ToString() + "', dateOfAdmission = '" + DOAPicker.Value.ToShortDateString() + "', dateOfDischarge = '" + DODPicker.Value.ToShortDateString() + "', wardNumber = '" + WardTextbox.Text.ToString() + "', roomNumber = '" + RoomNumberTextbox.Text.ToString() + "', bedNumber = '" + BedNumberTextbox.Text.ToString() + "', outcome = '" + OutcomeComboBox.SelectedItem.ToString() + "', formtype = '" + FormTypeComboBox.SelectedItem.ToString() + "', subprocedure = '" + subprocedurelist.ToString() + "'" +
                 " WHERE oppID = " + SearchScreen.oppID.ToString() + ";";
                 MessageBox.Show(qu);
                 db.Update(qu);
@@ -195,9 +208,7 @@ namespace Khidmat
                         x = 20;
                         y += maxHeight + 10;
                     }
-                    this.ImagePanel.Controls.Add(pic);
-
-
+                    //this.ImagePanel.Controls.Add(pic);
                 }
 
             }

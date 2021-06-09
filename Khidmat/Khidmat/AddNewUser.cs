@@ -16,7 +16,7 @@ namespace Khidmat
         public string gendervariable;
         DbConnection db = new DbConnection();
         private int index;
-        public static bool check = false;
+        bool check = false;
 
         public AddNewUser()//AdminPanel panel)
         {
@@ -32,7 +32,8 @@ namespace Khidmat
             NameTextBox.Text = Name;
             SpecializationTextBox.Text = specialization;
             ContactTextBox.Text = Contact;
-            //DOBPicker.Value = Convert.ToDateTime(DOB);
+            gendervariable = sex;
+            DOBPicker.Value = Convert.ToDateTime(DOB);
 
             if (editable == false)
             {
@@ -41,6 +42,15 @@ namespace Khidmat
                 ContactTextBox.Enabled = false;
                 DOBPicker.Enabled = false;
                 SubmitButton.Enabled = false;
+            }
+
+            for (int ix = 0; ix < GenderListBox.Items.Count; ++ix)
+            {
+                if (sex == GenderListBox.Items[ix].ToString())
+                {
+                    GenderListBox.SetItemChecked(ix, true);
+
+                }
             }
 
         }
@@ -57,9 +67,10 @@ namespace Khidmat
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            if (check == false)
+            if (this.check == false)
             {
-                string q = "INSERT INTO doctor (doctorName, sex, specialization, contact, dateofbirth) VALUES ('" + NameTextBox.Text.ToString() + "','" + gendervariable.ToString() + "','" + SpecializationTextBox.Text.ToString() + "','" + ContactTextBox.Text.ToString() + "','" + DOBPicker.Value.Date + "');";
+                string q = "INSERT INTO doctor (doctorName, sex, specialization, contact, dateofbirth) VALUES ('" + NameTextBox.Text.ToString() + "','" + gendervariable.ToString() + "','" + SpecializationTextBox.Text.ToString() + "','" + ContactTextBox.Text.ToString() + "', CONVERT(date, '" + DOBPicker.Value.Date + "', 105));";
+                MessageBox.Show(q);
                 db.Inserts(q);
                 MessageBox.Show("User Added Successfully!");
                 //adminPanelRef.Show();
@@ -67,7 +78,7 @@ namespace Khidmat
             else
             {
                 string qu = "UPDATE doctor " +
-                    "SET doctorName = '" + NameTextBox.Text.ToString() + "', specialization = '" + SpecializationTextBox.Text.ToString() + "', contact = '" + ContactTextBox.Text.ToString() + "', dateofbirth = '" + DOBPicker.Value.Date + "', sex = '" + gendervariable + "';" +
+                    "SET doctorName = '" + NameTextBox.Text.ToString() + "', specialization = '" + SpecializationTextBox.Text.ToString() + "', contact = '" + ContactTextBox.Text.ToString() + "', dateofbirth = CONVERT(date, '" + DOBPicker.Value.Date + "', 105) , sex = '" + gendervariable + "';" +
                     "WHERE doctorID = " + SearchUsers.doctorID.ToString();
                 MessageBox.Show(qu);
                 db.Update(qu);

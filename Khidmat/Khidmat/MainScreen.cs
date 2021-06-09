@@ -15,6 +15,11 @@ namespace Khidmat
         {
             InitializeComponent();
             loginReference = login;
+            if (Program.userType == false)
+            {
+                AdminPanelButton.Enabled = false;
+                AdminPanelButton.Visible = false;
+            }
         }
 
         private void LogOutButton_Click(object sender, EventArgs e)

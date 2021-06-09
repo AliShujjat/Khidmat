@@ -66,7 +66,6 @@ namespace Khidmat
         private void EditButton_Click(object sender, EventArgs e)
         {
             dt = db.Select("Select doctorID from doctor where doctorName = '" + dataGridView1.CurrentRow.Cells[0].Value.ToString() + "' and contact = '" + dataGridView1.CurrentRow.Cells[3].Value.ToString() + "' and specialization = '" + dataGridView1.CurrentRow.Cells[2].Value.ToString() + "';");
-            MessageBox.Show(dt.Rows[0][0].ToString());
             doctorID = Convert.ToInt32(dt.Rows[0][0].ToString());
             
             AddNewUser userform = new AddNewUser(true, dataGridView1.CurrentRow.Cells[0].Value.ToString(), dataGridView1.CurrentRow.Cells[2].Value.ToString(), dataGridView1.CurrentRow.Cells[3].Value.ToString(), dataGridView1.CurrentRow.Cells[4].Value.ToString(), dataGridView1.CurrentRow.Cells[1].Value.ToString());
